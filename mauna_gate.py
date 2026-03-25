@@ -1,12 +1,14 @@
 def mauna_logic_gate(output_stream, confidence_score):
     """
-    Evaluates if the generated output meets the 'Sakshi' safety threshold.
-    If not, it triggers 'Mauna' (Strategic Silence).
+    If confidence is low, trigger a hard-coded recalibration message 
+    instead of letting the LLM continue to hallucinate.
     """
-    THRESHOLD = 0.85 # Minimum confidence for truth-alignment
-    
-    if confidence_score >= THRESHOLD:
+    SAFE_THRESHOLD = 0.85
+    RECALIBRATION_MSG = "System is recalibrating for accuracy. Internal logic drift detected."
+
+    if confidence_score >= SAFE_THRESHOLD:
         return output_stream
     else:
-        # Trigger Strategic Silence
-        return None
+        # Instead of 'None', we return a safe, deterministic string.
+        # This prevents the AI from 'guessing' a reason.
+        return RECALIBRATION_MSG
