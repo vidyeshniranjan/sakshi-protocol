@@ -8,10 +8,16 @@ The Sakshi-Protocol is a dual-stream cognitive architecture designed to mitigate
 ## Key Components
 * **Executive Stream (Manas):** The active generative layer.
 * **Supervisory Stream (Sakshi):** The non-participatory witness layer.
-* **Mauna Logic Gate:** The high-pass filter for "Strategic Silence."
+* **Viveka Logic Gate:** The high-pass filter for "Strategic Recalibration."
+* **Interpretive Mapping:** Pancha Kosha framework that describes functional layering.
 
 ## Project Status
 - [x] Repository Initialized (Private Vault)
 - [x] Mauna Logic Refined (Deterministic Recalibration)
-- [ ] Section 1: Introduction (LaTeX - Drafting)
-- [ ] Section 2: Pancha Kosha Data Layering (Pending)
+- [x] Abstract
+- [x] Section 1: Introduction (LaTeX - Completed)
+- [x] Section 2: The Alignment Paradox (LaTeX - Completed)
+- [x] Section 3: System Architecture: The Sakshi Protocol (LaTeX - Completed)
+- [x] Section 4: Behavioral Validation: The Sakshi Protocol (LaTeX - Completed)
+- [x] Section 5: Epistemic Foundations (LaTeX - Completed)
+- [x] Section 6: Conclusion and Future Directions (LaTeX - Completed)
