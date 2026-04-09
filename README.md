@@ -1,5 +1,5 @@
 # sakshi-protocol
-**Version 1.0 | Tactical Architecture for AI Safety**
+**Version 1.0 | Architecture for Verifiable AI Cognition**
 **© 2026 Vidyesh Niranjan. All Rights Reserved.**
 
 ## Overview
