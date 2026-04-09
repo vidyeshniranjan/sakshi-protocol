@@ -1,4 +1,4 @@
-def mauna_logic_gate(output_stream, confidence_score):
+def viveka_logic_gate(output_stream, confidence_score):
     """
     If confidence is low, trigger a hard-coded recalibration message 
     instead of letting the LLM continue to hallucinate.
