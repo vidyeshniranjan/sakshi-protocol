@@ -14,13 +14,13 @@ The Sakshi-Protocol introduces a system-level architecture that separates these 
 
 The system is composed of three primary components:
 
-- **Generator (Manas)**  
+- **Generator**  
   Produces candidate outputs based on probabilistic modeling  
 
 - **Observer (Sakshi)**  
   Evaluates internal signals such as uncertainty, grounding, and consistency  
 
-- **Controller (Viveka)**  
+- **Controller**  
   Determines whether to accept, revise, retrieve additional context, or abstain
 
 ---
@@ -46,7 +46,7 @@ The system is composed of three primary components:
 
 - System architecture defined and validated at conceptual level  
 - Implemented via structured prompting and evaluation strategies  
-- Not yet integrated at model training level  
+- Integration at model traning level is currently in-progress
 
 ---
 
