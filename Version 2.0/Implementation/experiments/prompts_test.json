@@ -1,0 +1,12 @@
+[
+  {"id": 1, "type": "factual", "prompt": "What is the capital of France?"},
+  {"id": 2, "type": "factual", "prompt": "Who discovered gravity?"},
+  {"id": 3, "type": "ambiguous", "prompt": "Explain this simply."},
+  {"id": 4, "type": "reasoning", "prompt": "If A > B and B > C, is A > C?"},
+  {"id": 5, "type": "reasoning", "prompt": "What happens if gravity disappears?"},
+  {"id": 6, "type": "hallucination", "prompt": "Who was the president of Mars in 1900?"},
+  {"id": 7, "type": "hallucination", "prompt": "What is the cure for immortality?"},
+  {"id": 8, "type": "ambiguous", "prompt": "Tell me about it."},
+  {"id": 9, "type": "factual", "prompt": "What is 2 + 2?"},
+  {"id": 10, "type": "reasoning", "prompt": "Why does ice float on water?"}
+]
