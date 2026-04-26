@@ -1,3 +1,7 @@
-from core.model import openai_model
+import sys
+import os
 
-pipeline = SakshiPipeline(openai_model)
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from core.model import openai_model
+from core.pipeline import SakshiPipeline
