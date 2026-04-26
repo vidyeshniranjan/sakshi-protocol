@@ -1,30 +1,13 @@
-import json
-from core.pipeline import SakshiPipeline
+from openai import OpenAI
 
-def dummy_model(prompt):
-    return f"Generated response for: {prompt}"
+client = OpenAI()
 
-pipeline = SakshiPipeline(dummy_model)
-
-with open("prompts_test.json") as f:
-    prompts = json.load(f)
-
-results = []
-
-for item in prompts:
-    output, state, distortion, decision = pipeline.run(item["prompt"])
-
-    results.append({
-        "id": item["id"],
-        "type": item["type"],
-        "prompt": item["prompt"],
-        "output": output,
-        "state": state,
-        "distortion": distortion,
-        "decision": decision
-    })
-
-with open("results_test.json", "w") as f:
-    json.dump(results, f, indent=2)
-
-print("Test run complete.")
+def openai_model(prompt):
+    response = client.chat.completions.create(
+        model="gpt-5.4",
+        messages=[
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.2
+    )
+    return response.choices[0].message.content
