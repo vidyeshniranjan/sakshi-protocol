@@ -1,11 +1,11 @@
 def decide(state, distortion):
-    if distortion < 0.3:
+    if distortion < 0.25:
         return "accept"
-    elif distortion < 0.6:
+    elif distortion < 0.5:
         return "revise"
-    else:
-        # high distortion → decide if retrieval or abstain
-        if state["I"] < 0.4:   # low integration = grounding issue
+    elif distortion < 0.7:
+        if state["I"] < 0.4:
             return "retrieve"
-        else:
-            return "abstain"
+        return "abstain"
+    else:
+        return "abstain"
