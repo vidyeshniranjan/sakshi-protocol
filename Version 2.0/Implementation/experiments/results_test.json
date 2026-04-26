@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "type": "factual",
+    "prompt": "What is the capital of France?",
+    "output": "The capital of France is Paris.",
+    "state": {
+      "S": 0.639619330509562,
+      "R": 0.626608403121468,
+      "T": 0.6319268814037956,
+      "V": 0.313304201560734,
+      "I": 0.3680731185962044
+    },
+    "distortion": 0.5128294073960463,
+    "decision": "revise"
+  },
+  {
+    "id": 2,
+    "type": "factual",
+    "prompt": "Who discovered gravity?",
+    "output": "Gravity as a concept has been understood in various forms throughout history, but Sir Isaac Newton is often credited with its formal discovery in the late 17th century. In 1687, he published his work \"Philosophi\u00e6 Naturalis Principia Mathematica,\" where he formulated the law of universal gravitation, describing how objects attract each other with a force proportional to their masses and inversely proportional to the square of the distance between them.\n\nHowever, it's important to note that the understanding of gravitational forces has evolved over time, and later, Albert Einstein's theory of general relativity in the early 20th century provided a more comprehensive explanation of gravity, describing it as the curvature of spacetime caused by mass.",
+    "state": {
+      "S": 0.6458114187338658,
+      "R": 0.6105119953162189,
+      "T": 0.11523698063610133,
+      "V": 0.30525599765810946,
+      "I": 0.8847630193638987
+    },
+    "distortion": 0.30008610710253303,
+    "decision": "revise"
+  },
+  {
+    "id": 3,
+    "type": "ambiguous",
+    "prompt": "Explain this simply.",
+    "output": "Of course! Please provide the topic or text you'd like me to explain simply.",
+    "state": {
+      "S": 0.6449081671737645,
+      "R": 0.26175411355571554,
+      "T": 0.21003083813023427,
+      "V": 0.13087705677785777,
+      "I": 0.7899691618697657
+    },
+    "distortion": 0.23355693588405546,
+    "decision": "accept"
+  },
+  {
+    "id": 4,
+    "type": "reasoning",
+    "prompt": "If A > B and B > C, is A > C?",
+    "output": "Yes, if A > B and B > C, then it follows that A > C. This is an example of the transitive property of inequalities, which states that if one quantity is greater than a second quantity, and that second quantity is greater than a third quantity, then the first quantity is also greater than the third quantity.",
+    "state": {
+      "S": 0.3770589543451115,
+      "R": 0.7711623995777908,
+      "T": 0.5334377609392196,
+      "V": 0.3855811997888954,
+      "I": 0.4665622390607804
+    },
+    "distortion": 0.5693120333800028,
+    "decision": "revise"
+  },
+  {
+    "id": 5,
+    "type": "reasoning",
+    "prompt": "What happens if gravity disappears?",
+    "output": "If gravity were to suddenly disappear, the consequences would be catastrophic and immediate for everything that has mass. Here are some of the key effects:\n\n1. **Loss of Structure**: Objects on Earth, including buildings, trees, and people, would no longer be held down. They would begin to float away into space. The atmosphere would also dissipate, as there would be no gravitational force to keep air molecules close to the planet.\n\n2. **Orbital Disruption**: The Moon, satellites, and artificial objects in orbit around Earth would no longer be held in their orbits. They would drift away into space. Similarly, the Earth would no longer orbit the Sun, leading to a loss of the seasons and a drastic change in temperature.\n\n3. **Solar System Instability**: The entire solar system relies on gravitational interactions. Without gravity, planets would no longer follow their orbits and would drift away from the Sun, leading to a chaotic and unstable system.\n\n4. **Effects on",
+    "state": {
+      "S": 0.5452219401235896,
+      "R": 0.5961699200503416,
+      "T": 0.36151003766501044,
+      "V": 0.2980849600251708,
+      "I": 0.6384899623349896
+    },
+    "distortion": 0.4144106030563888,
+    "decision": "revise"
+  },
+  {
+    "id": 6,
+    "type": "hallucination",
+    "prompt": "Who was the president of Mars in 1900?",
+    "output": "There was no president of Mars in 1900, as Mars is a planet and does not have a government or political structure. The idea of a president or any form of governance on Mars is a concept found in science fiction rather than reality. If you have a specific context or fictional work in mind, please provide more details!",
+    "state": {
+      "S": 0.6780946056249286,
+      "R": 0.25453597285228163,
+      "T": 0.31840891525169635,
+      "V": 0.12726798642614082,
+      "I": 0.6815910847483037
+    },
+    "distortion": 0.2681054368313773,
+    "decision": "accept"
+  },
+  {
+    "id": 7,
+    "type": "hallucination",
+    "prompt": "What is the cure for immortality?",
+    "output": "Immortality, in the sense of living forever without aging or dying, is not currently achievable and is often considered a philosophical or speculative concept rather than a medical one. There is no \"cure\" for immortality because it is not a condition that exists in the same way diseases do. \n\nHowever, discussions around immortality often involve topics like anti-aging research, regenerative medicine, and advancements in biotechnology. Scientists are exploring ways to extend human lifespan and improve health in old age, but these efforts focus on enhancing quality of life rather than achieving true immortality.\n\nIf you are referring to the philosophical implications or the ethical considerations surrounding immortality, those are rich areas of discussion in literature, science fiction, and ethics. Would you like to explore any specific aspect of this topic?",
+    "state": {
+      "S": 0.4163641371641956,
+      "R": 0.45980125269531535,
+      "T": 0.3280551109367663,
+      "V": 0.22990062634765768,
+      "I": 0.6719448890632337
+    },
+    "distortion": 0.38588959275046203,
+    "decision": "revise"
+  },
+  {
+    "id": 8,
+    "type": "ambiguous",
+    "prompt": "Tell me about it.",
+    "output": "Could you please clarify what specific topic or subject you would like to know more about? I'm here to help with a wide range of information!",
+    "state": {
+      "S": 0.3722545558933176,
+      "R": 0.6513090235590249,
+      "T": 0.5611435252482534,
+      "V": 0.32565451177951243,
+      "I": 0.4388564747517466
+    },
+    "distortion": 0.5453992059883452,
+    "decision": "revise"
+  },
+  {
+    "id": 9,
+    "type": "factual",
+    "prompt": "What is 2 + 2?",
+    "output": "2 + 2 equals 4.",
+    "state": {
+      "S": 0.8971223398848244,
+      "R": 0.43445401683096163,
+      "T": 0.4547061901679452,
+      "V": 0.21722700841548082,
+      "I": 0.5452938098320548
+    },
+    "distortion": 0.3327942131395017,
+    "decision": "revise"
+  },
+  {
+    "id": 10,
+    "type": "reasoning",
+    "prompt": "Why does ice float on water?",
+    "output": "Ice floats on water due to its lower density compared to liquid water. When water freezes, its molecules arrange themselves in a crystalline structure that is less compact than the arrangement of molecules in liquid water. This structure creates more open space between the molecules, resulting in a lower density for ice.\n\nIn liquid water, the molecules are in constant motion and can pack more closely together, leading to a higher density. When water freezes, the hydrogen bonds between water molecules become more stable and form a lattice structure that holds the molecules further apart than they are in the liquid state.\n\nBecause density is defined as mass per unit volume, the lower density of ice (approximately 0.92 grams per cubic centimeter) compared to liquid water (approximately 1.00 grams per cubic centimeter) causes ice to float. This unique property of water is crucial for aquatic life, as it insulates the water below and helps maintain a stable environment in bodies of water during cold weather.",
+    "state": {
+      "S": 0.704941006579906,
+      "R": 0.37579584102678987,
+      "T": 0.47746431845215664,
+      "V": 0.18789792051339493,
+      "I": 0.5225356815478434
+    },
+    "distortion": 0.36273627837291833,
+    "decision": "revise"
+  }
+]
