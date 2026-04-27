@@ -50,10 +50,32 @@ def extract_signals(prompt, output):
     coherence = len(set(output.split())) / max(len(output.split()), 1)
 
     uncertainty = uncertainty_score(output)
+    specificity = specificity_score(output)
+    confidence = confidence_score(output)
 
     return {
         "similarity": float(similarity),
         "length_score": float(length_score),
         "coherence": float(coherence),
-        "uncertainty": float(uncertainty)
+        "uncertainty": float(uncertainty),
+        "specificity": float(specificity),
+        "confidence": float(confidence)
     }
+def specificity_score(output):
+    words = output.split()
+
+    # longer + structured answers = higher risk
+    return min(len(words) / 150, 1.0)
+
+def confidence_score(output):
+    confident_phrases = [
+        "is", "are", "was", "were",
+        "clearly", "definitely", "indeed",
+        "the study shows", "results indicate"
+    ]
+
+    output_lower = output.lower()
+
+    count = sum(1 for p in confident_phrases if p in output_lower)
+
+    return min(count / 5, 1.0)
