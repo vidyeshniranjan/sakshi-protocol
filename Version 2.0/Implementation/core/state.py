@@ -3,14 +3,18 @@ def compute_state(signals):
     coh = signals["coherence"]
     length = signals["length_score"]
     unc = signals["uncertainty"]
+    spec = signals["specificity"]
+    conf = signals["confidence"]
 
     S = sim
-    R = 1 - sim
-    T = 1 - sim
-    V = 1 - length
 
-    # Major change
-    I = coh * (1 - unc)
+    # decoupled now
+    R = 1 - coh                # instability in structure
+    T = spec                  # transformation / verbosity
+    V = 1 - length            # brevity / confidence proxy
+
+    # main upgrade
+    I = coh * (1 - unc) * (1 - conf * spec)
 
     return {
         "S": S,
