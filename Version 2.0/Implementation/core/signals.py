@@ -57,3 +57,8 @@ def extract_signals(prompt, output):
         "coherence": float(coherence),
         "uncertainty": float(uncertainty)
     }
+def specificity_score(output):
+    words = output.split()
+
+    # longer + structured answers = higher risk
+    return min(len(words) / 150, 1.0)
