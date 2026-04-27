@@ -31,3 +31,22 @@ def extract_signals(prompt, output):
         "length_score": float(length_score),
         "coherence": float(coherence)
     }
+    import re
+
+def uncertainty_score(output):
+    hedges = [
+        "i don't know",
+        "i am not aware",
+        "as of my last knowledge",
+        "it is possible",
+        "may not be",
+        "not well documented",
+        "unclear",
+        "no evidence"
+    ]
+
+    output_lower = output.lower()
+
+    score = sum(1 for h in hedges if h in output_lower)
+
+    return min(score / 3, 1.0)
