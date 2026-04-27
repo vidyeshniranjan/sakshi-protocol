@@ -6,15 +6,20 @@ def compute_state(signals):
     spec = signals["specificity"]
     conf = signals["confidence"]
 
-    S = sim
+    # FIX 4 — slight boost to stability
+    S = min(sim * 1.1, 1.0)
 
-    # decoupled now
-    R = 1 - coh                # instability in structure
-    T = spec                  # transformation / verbosity
-    V = 1 - length            # brevity / confidence proxy
+    # Decoupled dimensions
+    R = 1 - coh
 
-    # main upgrade
-    I = coh * (1 - unc) * (1 - conf * spec)
+    # FIX 1 — soften specificity impact
+    T = spec * 0.5
+
+    # FIX 3 — balanced verbosity penalty
+    V = abs(0.5 - length)
+
+    # FIX 2 — reduce confidence penalty
+    I = coh * (1 - unc) * (1 - 0.5 * conf * spec)
 
     return {
         "S": S,
@@ -23,3 +28,6 @@ def compute_state(signals):
         "V": V,
         "I": I
     }
+📁 2. core/signals.py ❌ NO CHANGE
+
+👉
