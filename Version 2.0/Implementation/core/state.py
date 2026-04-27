@@ -1,9 +1,13 @@
 def compute_state(signals):
-    S = 1 - signals["variance"]
-    R = signals["entropy"]
-    T = 1 - signals["similarity"]
-    V = signals["entropy"] * 0.5
-    I = signals["similarity"]
+    sim = signals["similarity"]
+    length = signals["length_score"]
+    coh = signals["coherence"]
+
+    S = sim
+    R = 1 - sim
+    T = 1 - sim
+    V = 1 - length
+    I = coh
 
     return {
         "S": S,
