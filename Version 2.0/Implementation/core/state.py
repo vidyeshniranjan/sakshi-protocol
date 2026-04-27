@@ -18,8 +18,12 @@ def compute_state(signals):
     # FIX 3 — balanced verbosity penalty
     V = abs(0.5 - length) * 0.2
 
-    # FIX 2 — reduce confidence penalty
-    I = coh * (1 - unc) * (1 - 0.3 * conf * spec)
+   hallucination_risk = conf * spec * (1 - unc)
+
+I = coh * (1 - unc) * (1 - 0.3 * conf * spec)
+
+# NEW: penalize risky confidence
+I = I * (1 - 0.5 * hallucination_risk)
 
     return {
         "S": S,
