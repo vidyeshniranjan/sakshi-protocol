@@ -36,7 +36,7 @@ for item in prompts:
             "output": output,
             "state": state,
             "distortion": distortion,
-            "decision": decision
+            "decision": decision,
             "intervened": intervened
         })
 
