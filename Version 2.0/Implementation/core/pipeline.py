@@ -24,7 +24,7 @@ class SakshiPipeline:
     # Step 4: distortion
     distortion = compute_distortion(state)
 
-    # Step 5: decision (DEFINE FIRST)
+    # Step 5: decision
     decision = decide(state, distortion)
 
     # Step 6: Ω retrieval
