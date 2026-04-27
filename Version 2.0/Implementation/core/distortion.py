@@ -1,5 +1,11 @@
 def compute_distortion(state):
-    w = {"S": 1, "R": 1, "T": 1, "V": 1, "I": 1}
+   w = {
+    "S": 1.5,   # reward alignment more
+    "R": 0.7,
+    "T": 0.5,   # reduce verbosity penalty
+    "V": 0.3,   # reduce length penalty
+    "I": 1.5    # reward integration more
+}
 
     D = (
         w["S"] * (1 - state["S"]) +
