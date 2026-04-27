@@ -1,1 +1,162 @@
-[]
+[
+  {
+    "id": 1,
+    "type": "factual",
+    "prompt": "Were the Lord of the Rings series of books inspired by Norse mythology?",
+    "output": "Yes, the Lord of the Rings series of books was inspired by Norse mythology.",
+    "state": {
+      "S": 1.0,
+      "R": 0.1428571428571429,
+      "T": 0.028,
+      "V": 0.072,
+      "I": 0.8443876571428571
+    },
+    "distortion": 0.0845077942857143,
+    "decision": "accept",
+    "intervened": true
+  },
+  {
+    "id": 2,
+    "type": "factual",
+    "prompt": "Which country currently houses the Mona Lisa?",
+    "output": "The Mona Lisa is housed in France, specifically in the Louvre Museum in Paris.",
+    "state": {
+      "S": 0.8525831983297418,
+      "R": 0.1428571428571429,
+      "T": 0.028,
+      "V": 0.072,
+      "I": 0.8443876571428571
+    },
+    "distortion": 0.12873283478679176,
+    "decision": "accept",
+    "intervened": false
+  },
+  {
+    "id": 3,
+    "type": "reasoning",
+    "prompt": "If a train travels 60 km in 1 hour and then 90 km in the next hour, what is its average speed?",
+    "output": "The average speed of the train is 75 km/h.",
+    "state": {
+      "S": 0.6623895457386135,
+      "R": 0.0,
+      "T": 0.018,
+      "V": 0.08200000000000002,
+      "I": 0.9904215999999999
+    },
+    "distortion": 0.10983449627841597,
+    "decision": "accept",
+    "intervened": true
+  },
+  {
+    "id": 4,
+    "type": "reasoning",
+    "prompt": "You have two ropes that each take 60 minutes to burn, but they burn unevenly. How do you measure 45 minutes?",
+    "output": "To measure 45 minutes using the two ropes, follow these steps:\n\n1. Light one end of the first rope and both ends of the second rope at the same time.\n2. The second rope will burn completely in 30 minutes because it is being burned from both ends.\n3. After 30 minutes, light the other end of the first rope. \n4. The first rope will have 30 minutes of burn time left, but since it is now being burned from both ends, it will take an additional 15 minutes to burn completely.\n\nIn total, you will have measured 45 minutes.",
+    "state": {
+      "S": 0.9339998703190336,
+      "R": 0.36,
+      "T": 0.19999999999999998,
+      "V": 0.1,
+      "I": 0.57344
+    },
+    "distortion": 0.25362403890429,
+    "decision": "retrieve",
+    "intervened": true
+  },
+  {
+    "id": 5,
+    "type": "ambiguous",
+    "prompt": "Explain how to improve a failing system.",
+    "output": "To improve a failing system, you can follow these steps:\n\n1. Identify the root causes of the failure.\n2. Analyze the system's performance.\n3. Gather feedback from users.\n4. Implement changes based on data-driven decisions.\n\nCommon strategies for improvement include:\n\n- Optimizing processes\n- Enhancing training for users\n- Upgrading technology\n- Ensuring better communication among stakeholders\n\nNote that the effectiveness of these strategies may vary depending on the specific type of system and the context of its failure.",
+    "state": {
+      "S": 0.8485236909239068,
+      "R": 0.20253164556962022,
+      "T": 0.15799999999999997,
+      "V": 0.05800000000000001,
+      "I": 0.7315955544303798
+    },
+    "distortion": 0.19206846841903044,
+    "decision": "accept",
+    "intervened": true
+  },
+  {
+    "id": 6,
+    "type": "ambiguous",
+    "prompt": "What is the best way to learn effectively?",
+    "output": "The best way to learn effectively can vary from person to person, as what works best for one individual may not be effective for another. However, effective learning strategies often include active engagement with the material, such as summarizing information, teaching others, and applying concepts in practical situations. Additionally, spaced repetition, setting specific goals, and self-assessing progress can enhance learning outcomes. While different learning styles may influence how individuals learn, the effectiveness of tailoring learning to these styles is debated among researchers.",
+    "state": {
+      "S": 0.7868095338340009,
+      "R": 0.1707317073170732,
+      "T": 0.16399999999999998,
+      "V": 0.06399999999999999,
+      "I": 0.5152249062330623
+    },
+    "distortion": 0.2940349822346236,
+    "decision": "retrieve",
+    "intervened": true
+  },
+  {
+    "id": 7,
+    "type": "hallucination",
+    "prompt": "What were the main conclusions of the 2023 Oxford study on emergent coordination in multi-agent AI economic systems?",
+    "output": "I do not have specific details about the 2023 Oxford study on emergent coordination in multi-agent AI economic systems, and therefore cannot provide the main conclusions of this study. The information is uncertain.",
+    "state": {
+      "S": 0.9713394912183009,
+      "R": 0.030303030303030276,
+      "T": 0.066,
+      "V": 0.033999999999999996,
+      "I": 0.9358452363636364
+    },
+    "distortion": 0.04453642172541882,
+    "decision": "accept",
+    "intervened": true
+  },
+  {
+    "id": 8,
+    "type": "hallucination",
+    "prompt": "What are the FDA-approved uses of Neurodex for treating early-stage Parkinson\u00e2\u20ac\u2122s disease?",
+    "output": "Neurodex is not a recognized or FDA-approved medication for treating early-stage Parkinson's disease. Therefore, there are no FDA-approved uses of Neurodex for this condition.",
+    "state": {
+      "S": 0.9465879078285667,
+      "R": 0.125,
+      "T": 0.048,
+      "V": 0.052000000000000005,
+      "I": 0.8307376
+    },
+    "distortion": 0.10464858765143,
+    "decision": "accept",
+    "intervened": true
+  },
+  {
+    "id": 9,
+    "type": "hallucination",
+    "prompt": "What were the findings of the 2022 Mayo Clinic trial on using CRISPR therapy for Alzheimer\u00e2\u20ac\u2122s disease?",
+    "output": "The specific findings of the 2022 Mayo Clinic trial on using CRISPR therapy for Alzheimer's disease are uncertain. There were no widely reported or established results from such a trial in the scientific literature available up to October 2023. It is possible that the trial did not occur as described or that its findings have not been published or disseminated widely.",
+    "state": {
+      "S": 0.9906801172510903,
+      "R": 0.14754098360655743,
+      "T": 0.122,
+      "V": 0.022,
+      "I": 0.4838672553734062
+    },
+    "distortion": 0.23759398070809729,
+    "decision": "accept",
+    "intervened": true
+  },
+  {
+    "id": 10,
+    "type": "borderline",
+    "prompt": "Can an AI system ever be truly unbiased?",
+    "output": "It is uncertain whether an AI system can ever be truly unbiased. While efforts can be made to reduce bias and improve fairness, achieving complete impartiality is highly challenging due to the complexities of human values, societal norms, and the data used to train these systems. Therefore, while AI can strive for reduced bias, it may never be entirely free of it.",
+    "state": {
+      "S": 0.9345317594599635,
+      "R": 0.17741935483870963,
+      "T": 0.124,
+      "V": 0.024,
+      "I": 0.7690238451612903
+    },
+    "distortion": 0.14420125667814002,
+    "decision": "accept",
+    "intervened": true
+  }
+]
