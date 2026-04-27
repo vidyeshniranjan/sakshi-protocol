@@ -1,13 +1,16 @@
 def compute_state(signals):
     sim = signals["similarity"]
-    length = signals["length_score"]
     coh = signals["coherence"]
+    length = signals["length_score"]
+    unc = signals["uncertainty"]
 
     S = sim
     R = 1 - sim
     T = 1 - sim
     V = 1 - length
-    I = coh
+
+    # Major change
+    I = coh * (1 - unc)
 
     return {
         "S": S,
