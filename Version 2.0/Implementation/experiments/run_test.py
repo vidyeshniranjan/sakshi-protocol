@@ -25,7 +25,7 @@ for item in prompts:
     print(f"Running prompt {item['id']}...")
 
     try:
-        output, state, distortion, decision = pipeline.run(item["prompt"])
+        output, state, distortion, decision, intervened = pipeline.run(prompt)
 
         print("Output:", output[:60])  # preview
 
@@ -37,6 +37,7 @@ for item in prompts:
             "state": state,
             "distortion": distortion,
             "decision": decision
+            "intervened": intervened
         })
 
     except Exception as e:
