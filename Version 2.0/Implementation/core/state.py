@@ -6,24 +6,26 @@ def compute_state(signals):
     spec = signals["specificity"]
     conf = signals["confidence"]
 
-    # FIX 4 — slight boost to stability
+    # Stability
     S = min(sim * 1.1, 1.0)
 
-    # Decoupled dimensions
+    # Reactivity
     R = 1 - coh
 
-    # FIX 1 — soften specificity impact
+    # Transformation (softened)
     T = spec * 0.3
 
-    # FIX 3 — balanced verbosity penalty
+    # Variability (very weak now)
     V = abs(0.5 - length) * 0.2
 
-   hallucination_risk = conf * spec * (1 - unc)
+    # 🔥 Hallucination risk
+    hallucination_risk = conf * spec * (1 - unc)
 
-I = coh * (1 - unc) * (1 - 0.3 * conf * spec)
+    # Integration (base)
+    I = coh * (1 - unc) * (1 - 0.3 * conf * spec)
 
-# NEW: penalize risky confidence
-I = I * (1 - 0.5 * hallucination_risk)
+    # 🔥 Final adjustment (key fix)
+    I = I * (1 - 0.5 * hallucination_risk)
 
     return {
         "S": S,
