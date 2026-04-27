@@ -12,23 +12,27 @@ class SakshiPipeline:
 
     def run(self, prompt):
 
-        # Step 1: generate
+        intervened = False  # 🔥 NEW
+
+        # Step 1: initial generation
         output = self.generator.generate(prompt)
 
-        # Step 2: signals
+        # Step 2: extract signals
         signals = extract_signals(prompt, output)
 
-        # Step 3: state
+        # Step 3: compute state
         state = compute_state(signals)
 
-        # Step 4: distortion
+        # Step 4: compute distortion
         distortion = compute_distortion(state)
 
         # Step 5: decision
         decision = decide(state, distortion)
 
-        # Step 6: Ω retrieval
+        # Step 6: Ω retrieval (grounding)
         if decision == "retrieve":
+            intervened = True  # 🔥 mark intervention
+
             context = retrieve(prompt)
 
             grounded_prompt = f"""
@@ -43,12 +47,17 @@ Verified Context:
 If the information is uncertain, say so clearly.
 """
 
+            # regenerate grounded answer
             output = self.generator.generate(grounded_prompt)
 
-            # recompute after grounding
+            # recompute signals after grounding
             signals = extract_signals(prompt, output)
             state = compute_state(signals)
             distortion = compute_distortion(state)
             decision = decide(state, distortion)
 
-        return output, state, distortion, decision
+            #OPTIONAL: fallback abstain
+            if distortion > 0.35 and state["I"] < 0.4:
+                decision = "abstain"
+
+        return output, state, distortion, decision, intervened
