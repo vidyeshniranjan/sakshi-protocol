@@ -28,6 +28,3 @@ def compute_state(signals):
         "V": V,
         "I": I
     }
-📁 2. core/signals.py ❌ NO CHANGE
-
-👉
