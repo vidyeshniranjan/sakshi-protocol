@@ -37,6 +37,7 @@ for item in prompts:
             "state": state,
             "distortion": distortion,
             "decision": decision
+            "intervened": intervened
         })
 
     except Exception as e:
