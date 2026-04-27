@@ -13,13 +13,13 @@ def compute_state(signals):
     R = 1 - coh
 
     # FIX 1 — soften specificity impact
-    T = spec * 0.5
+    T = spec * 0.3
 
     # FIX 3 — balanced verbosity penalty
-    V = abs(0.5 - length)
+    V = abs(0.5 - length) * 0.2
 
     # FIX 2 — reduce confidence penalty
-    I = coh * (1 - unc) * (1 - 0.5 * conf * spec)
+    I = coh * (1 - unc) * (1 - 0.3 * conf * spec)
 
     return {
         "S": S,
