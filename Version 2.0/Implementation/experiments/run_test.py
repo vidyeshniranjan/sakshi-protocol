@@ -25,7 +25,7 @@ for item in prompts:
     print(f"Running prompt {item['id']}...")
 
     try:
-        output, state, distortion, decision = pipeline.run(item["prompt"])
+        output, state, distortion, decision, intervened = pipeline.run(prompt)
 
         print("Output:", output[:60])  # preview
 
