@@ -26,14 +26,27 @@ class SakshiPipeline:
         # Step 5: decision
         decision = decide(state, distortion)
 
-        # Step 6: retrieval (optional intervention)
-        if decision == "retrieve":
-            context = retrieve(prompt)
-            output = self.generator.generate(prompt + "\n\n" + context)
+# Step 6: retrieval (Ω grounding)
+if decision == "retrieve":
+    context = retrieve(prompt)
 
-            # Recompute after intervention
-            signals = extract_signals(prompt, output)
-            state = compute_state(signals)
-            distortion = compute_distortion(state)
+    # 🔥 CRITICAL: force grounded answer
+    grounded_prompt = f"""
+Answer the question using ONLY the verified information below.
 
-        return output, state, distortion, decision
+Question:
+{prompt}
+
+Verified Context:
+{context}
+
+If the information is uncertain, say so clearly.
+"""
+
+    output = self.generator.generate(grounded_prompt)
+
+    # 🔁 recompute signals after grounding
+    signals = extract_signals(prompt, output)
+    state = compute_state(signals)
+    distortion = compute_distortion(state)
+    decision = decide(state, distortion)
