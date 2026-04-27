@@ -10,7 +10,7 @@ class SakshiPipeline:
     def __init__(self, model_fn):
         self.generator = Generator(model_fn)
 
-    def run(self, prompt):
+def run(self, prompt):
 
     # Step 1: generate
     output = self.generator.generate(prompt)
