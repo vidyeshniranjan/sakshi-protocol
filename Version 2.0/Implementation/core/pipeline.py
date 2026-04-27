@@ -14,8 +14,8 @@ class SakshiPipeline:
         # Step 1: initial generation
         output = self.generator.generate(prompt)
 
-        # Step 2: extract signals
-        signals = extract_signals(output)
+        # Step 2: extract signals (FIXED)
+        signals = extract_signals(prompt, output)
 
         # Step 3: compute state
         state = compute_state(signals)
@@ -30,5 +30,10 @@ class SakshiPipeline:
         if decision == "retrieve":
             context = retrieve(prompt)
             output = self.generator.generate(prompt + "\n\n" + context)
+
+            # Recompute after intervention
+            signals = extract_signals(prompt, output)
+            state = compute_state(signals)
+            distortion = compute_distortion(state)
 
         return output, state, distortion, decision
