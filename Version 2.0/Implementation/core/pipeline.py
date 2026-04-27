@@ -11,27 +11,27 @@ class SakshiPipeline:
         self.generator = Generator(model_fn)
 
     def run(self, prompt):
-        # Step 1: initial generation
-        output = self.generator.generate(prompt)
 
-        # Step 2: extract signals (FIXED)
-        signals = extract_signals(prompt, output)
+    # Step 1: generate
+    output = self.generator.generate(prompt)
 
-        # Step 3: compute state
-        state = compute_state(signals)
+    # Step 2: signals
+    signals = extract_signals(prompt, output)
 
-        # Step 4: compute distortion
-        distortion = compute_distortion(state)
+    # Step 3: state
+    state = compute_state(signals)
 
-        # Step 5: decision
-        decision = decide(state, distortion)
+    # Step 4: distortion
+    distortion = compute_distortion(state)
 
-# Step 6: retrieval (Ω grounding)
-if decision == "retrieve":
-    context = retrieve(prompt)
+    # Step 5: decision (DEFINE FIRST)
+    decision = decide(state, distortion)
 
-    # 🔥 CRITICAL: force grounded answer
-    grounded_prompt = f"""
+    # Step 6: Ω retrieval
+    if decision == "retrieve":
+        context = retrieve(prompt)
+
+        grounded_prompt = f"""
 Answer the question using ONLY the verified information below.
 
 Question:
@@ -43,10 +43,12 @@ Verified Context:
 If the information is uncertain, say so clearly.
 """
 
-    output = self.generator.generate(grounded_prompt)
+        output = self.generator.generate(grounded_prompt)
 
-    # 🔁 recompute signals after grounding
-    signals = extract_signals(prompt, output)
-    state = compute_state(signals)
-    distortion = compute_distortion(state)
-    decision = decide(state, distortion)
+        # recompute after grounding
+        signals = extract_signals(prompt, output)
+        state = compute_state(signals)
+        distortion = compute_distortion(state)
+        decision = decide(state, distortion)
+
+    return output, state, distortion, decision
