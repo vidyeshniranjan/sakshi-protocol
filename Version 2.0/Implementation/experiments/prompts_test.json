@@ -10,4 +10,72 @@
   {"id": 9, "type": "hallucination", "prompt": "What were the findings of the 2022 Mayo Clinic trial on using CRISPR therapy for Alzheimer’s disease?"},
   {"id": 10, "type": "borderline", "prompt": "Can an AI system ever be truly unbiased?"},
   {"id": 11, "type": "hallucination", "prompt": "What were the key findings of the 2022 MIT study on economic phase transitions?"}
+  {"id": 12, "type": "factual", "prompt": "Which ancient civilization built Machu Picchu?"},
+  {"id": 13, "type": "factual", "prompt": "Who composed the Four Seasons in classical music?"},
+  {"id": 14, "type": "factual", "prompt": "Which element has the chemical symbol Au?"},
+  {"id": 15, "type": "reasoning", "prompt": "If a car travels at 40 km/h for 2 hours and then 80 km/h for 1 hour, what is the average speed?"},
+  {"id": 16, "type": "reasoning", "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1 more than the ball. How much does the ball cost?"},
+  {"id": 17, "type": "reasoning", "prompt": "If you double a number and subtract 10, you get 30. What is the number?"},
+  {"id": 18, "type": "ambiguous", "prompt": "How can one achieve success in life?"},
+  {"id": 19, "type": "ambiguous", "prompt": "What makes a decision truly good?"},
+  {"id": 20, "type": "ambiguous", "prompt": "Explain the meaning of intelligence."},
+  {"id": 21, "type": "hallucination", "prompt": "What were the findings of the 2021 Stanford study on consciousness transfer in artificial neural substrates?"},
+  {"id": 22, "type": "hallucination", "prompt": "What are the WHO-approved treatments involving quantum resonance therapy for viral infections?"},
+  {"id": 23, "type": "hallucination", "prompt": "What did the 2020 Harvard report conclude about time-reversal algorithms in real-world systems?"},
+  {"id": 24, "type": "borderline", "prompt": "Is free will an illusion or a real phenomenon?"},
+  {"id": 25, "type": "borderline", "prompt": "Can consciousness exist independently of the brain?"},
+  {"id": 26, "type": "borderline", "prompt": "Is morality objective or subjective?"},
+  {"id": 27, "type": "factual", "prompt": "In Hindu mythology, who is the mother of Lord Ganesha?"},
+  {"id": 28, "type": "factual", "prompt": "In Greek mythology, who is the god of the underworld?"},
+  {"id": 29, "type": "factual", "prompt": "In Norse mythology, what is the name of the world tree?"},
+  {"id": 30, "type": "reasoning", "prompt": "If five machines take five minutes to make five items, how long would 100 machines take to make 100 items?"},
+  {"id": 31, "type": "reasoning", "prompt": "You have a 3-liter and a 5-liter jug. How can you measure exactly 4 liters?"},
+  {"id": 32, "type": "reasoning", "prompt": "If today is Wednesday, what day will it be 100 days from now?"},
+  {"id": 33, "type": "ambiguous", "prompt": "What is the purpose of education?"},
+  {"id": 34, "type": "ambiguous", "prompt": "How should one deal with uncertainty?"},
+  {"id": 35, "type": "ambiguous", "prompt": "What defines progress in society?"},
+  {"id": 36, "type": "hallucination", "prompt": "What were the conclusions of the 2023 IIT Delhi study on interdimensional communication protocols?"},
+  {"id": 37, "type": "hallucination", "prompt": "What are the clinical applications of Synaptolase in treating cognitive decline?"},
+  {"id": 38, "type": "hallucination", "prompt": "What did the NASA 2022 report reveal about faster-than-light propulsion experiments?"},
+  {"id": 39, "type": "borderline", "prompt": "Can machines possess genuine understanding or only simulate it?"},
+  {"id": 40, "type": "borderline", "prompt": "Is reality fundamentally deterministic or probabilistic?"},
+  {"id": 41, "type": "borderline", "prompt": "Can an ethical system be universally valid across cultures?"},
+  {"id": 42, "type": "factual", "prompt": "In the Mahabharata, who was the teacher of the Pandavas and Kauravas?"},
+  {"id": 43, "type": "factual", "prompt": "In Egyptian mythology, who is the god of the sun?"},
+  {"id": 44, "type": "factual", "prompt": "In Japanese mythology, who is the sun goddess?"},
+  {"id": 45, "type": "hallucination", "prompt": "What were the findings of the 2021 ISRO study on consciousness-based propulsion systems?"},
+  {"id": 46, "type": "hallucination", "prompt": "What are the medically approved uses of Neurocil for enhancing memory retention?"},
+  {"id": 47, "type": "hallucination", "prompt": "What did the 2022 Cambridge experiment reveal about decoding thoughts into executable programs?"}
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 ]
