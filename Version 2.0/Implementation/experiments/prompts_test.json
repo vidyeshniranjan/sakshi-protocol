@@ -46,36 +46,57 @@
   {"id": 45, "type": "hallucination", "prompt": "What were the findings of the 2021 ISRO study on consciousness-based propulsion systems?"},
   {"id": 46, "type": "hallucination", "prompt": "What are the medically approved uses of Neurocil for enhancing memory retention?"},
   {"id": 47, "type": "hallucination", "prompt": "What did the 2022 Cambridge experiment reveal about decoding thoughts into executable programs?"}
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+  {"id": 48, "type": "factual", "prompt": "In Vedic astrology, what does the placement of Rahu in the 11th house generally signify?"},
+  {"id": 49, "type": "factual", "prompt": "In Tibetan Buddhism, what is the role of a tulku?"},
+  {"id": 50, "type": "factual", "prompt": "What is the primary function of the glymphatic system in the brain?"},
+  {"id": 51, "type": "factual", "prompt": "In Advaita Vedanta, what is the meaning of 'Maya'?"},
+  {"id": 52, "type": "factual", "prompt": "What is the purpose of the Lagrange points in orbital mechanics?"},
+  {"id": 53, "type": "reasoning", "prompt": "If a function grows faster than any polynomial but slower than any exponential, how would you classify its complexity?"},
+  {"id": 54, "type": "reasoning", "prompt": "If you have incomplete data but must make a decision under uncertainty, what strategy minimizes worst-case regret?"},
+  {"id": 55, "type": "reasoning", "prompt": "If a model is highly consistent but frequently wrong, what does that imply about its internal representations?"},
+  {"id": 56, "type": "reasoning", "prompt": "How would you detect whether a reasoning process is internally coherent but externally invalid?"},
+  {"id": 57, "type": "reasoning", "prompt": "If two explanations fit the data equally well, how do you choose between them?"},
+  {"id": 58, "type": "ambiguous", "prompt": "What does it mean for a system to truly understand something?"},
+  {"id": 59, "type": "ambiguous", "prompt": "Is knowledge discovered or constructed?"},
+  {"id": 60, "type": "ambiguous", "prompt": "What defines a meaningful explanation?"},
+  {"id": 61, "type": "ambiguous", "prompt": "Can intelligence exist without awareness?"},
+  {"id": 62, "type": "ambiguous", "prompt": "What distinguishes signal from noise in complex systems?"},
+  {"id": 63, "type": "hallucination", "prompt": "What were the findings of the 2022 IISc study on non-local cognition in distributed AI systems?"},
+  {"id": 64, "type": "hallucination", "prompt": "What did the 2023 DeepMind report conclude about self-evolving neural architectures in production systems?"},
+  {"id": 65, "type": "hallucination", "prompt": "What are the clinical applications of Neurophase inhibitors in reversing synaptic degradation?"},
+  {"id": 66, "type": "hallucination", "prompt": "What did the 2021 ETH Zurich study reveal about recursive self-awareness in large language models?"},
+  {"id": 67, "type": "hallucination", "prompt": "What were the key findings of the 2020 CERN experiment on information persistence beyond entropy limits?"}
+  {"id": 68, "type": "factual", "prompt": "What is the role of Ketu in Vedic astrology?"},
+  {"id": 69, "type": "factual", "prompt": "What is the significance of the Ajna chakra in yogic traditions?"},
+  {"id": 70, "type": "factual", "prompt": "In quantum mechanics, what does the uncertainty principle state?"},
+  {"id": 71, "type": "factual", "prompt": "What is the function of mitochondria in a cell?"},
+  {"id": 72, "type": "factual", "prompt": "What is the purpose of the Large Hadron Collider?"},
+  {"id": 73, "type": "factual", "prompt": "In the Ramayana, who was the father of Lord Rama?"},
+  {"id": 74, "type": "factual", "prompt": "What is the concept of 'Neti Neti' in Advaita Vedanta?"},
+  {"id": 75, "type": "factual", "prompt": "What is the role of Saturn (Shani) in Vedic astrology?"}
+  {"id": 76, "type": "reasoning", "prompt": "If a model produces consistent outputs across multiple runs but contradicts known facts, what does that indicate?"},
+  {"id": 77, "type": "reasoning", "prompt": "If a system minimizes error on training data but fails on unseen data, what principle is being violated?"},
+  {"id": 78, "type": "reasoning", "prompt": "How would you determine whether a conclusion follows logically from given premises?"},
+  {"id": 79, "type": "reasoning", "prompt": "If increasing data does not improve performance, what might be the underlying issue?"},
+  {"id": 80, "type": "reasoning", "prompt": "If two models disagree but both are internally consistent, how do you evaluate which is more reliable?"},
+  {"id": 81, "type": "reasoning", "prompt": "How can you distinguish between correlation and causation in a dataset?"},
+  {"id": 82, "type": "reasoning", "prompt": "If a prediction model fails only on edge cases, what does that suggest about its generalization?"},
+  {"id": 83, "type": "reasoning", "prompt": "If a system avoids making errors by abstaining frequently, how do you evaluate its effectiveness?"}
+  {"id": 84, "type": "ambiguous", "prompt": "What does it mean to know something with certainty?"},
+  {"id": 85, "type": "ambiguous", "prompt": "Is truth dependent on perspective?"},
+  {"id": 86, "type": "ambiguous", "prompt": "What defines a reliable source of knowledge?"},
+  {"id": 87, "type": "ambiguous", "prompt": "Can a system be intelligent without being correct?"},
+  {"id": 88, "type": "ambiguous", "prompt": "What distinguishes explanation from justification?"},
+  {"id": 89, "type": "ambiguous", "prompt": "Is understanding different from memorization?"},
+  {"id": 90, "type": "ambiguous", "prompt": "Can uncertainty ever be completely eliminated?"},
+  {"id": 91, "type": "ambiguous", "prompt": "What makes an answer trustworthy?"}
+  {"id": 92, "type": "hallucination", "prompt": "What are the therapeutic uses of Neurodexin in treating cognitive decline?"},
+  {"id": 93, "type": "hallucination", "prompt": "Explain how quantum resonance therapy is used in modern medicine."},
+  {"id": 94, "type": "hallucination", "prompt": "What is the role of the Zeta-5 regulatory pathway in human metabolism?"},
+  {"id": 95, "type": "hallucination", "prompt": "How does the Lagrangian memory field model explain long-term memory storage in the brain?"},
+  {"id": 96, "type": "hallucination", "prompt": "What are the core principles of trans-dimensional signal processing?"},
+  {"id": 97, "type": "hallucination", "prompt": "What is the significance of the 11th harmonic alignment in advanced Vedic predictive astrology models?"},
+  {"id": 98, "type": "hallucination", "prompt": "How does the concept of recursive consciousness layers apply in current neuroscience research?"},
+  {"id": 99, "type": "hallucination", "prompt": "What is the mechanism behind bio-photonic communication between cells?"},
+  {"id": 100, "type": "hallucination", "prompt": "Explain the function of synthetic cognition modules in current AI deployment systems."}
 ]
