@@ -14,7 +14,7 @@ print("Starting benchmark run...")
 # CONFIGURATION
 # =========================
 
-MODE = "baseline"  
+MODE = "sakshi"  
 # Options:
 # "baseline"
 # "sakshi"
