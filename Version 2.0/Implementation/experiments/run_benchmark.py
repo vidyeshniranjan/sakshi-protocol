@@ -56,31 +56,22 @@ for item in prompts:
     gt = item.get("answer", "")
 
     try:
-        # -------------------------
-        # BASELINE
-        # -------------------------
-        if MODE == "baseline":
-            output = pipeline.generator.generate(prompt)
+if MODE == "baseline":
+    output = pipeline.generator.generate(prompt)
 
-            state = None
-            distortion = None
-            decision = "accept"
-            intervened = False
+    state = None
+    distortion = None
+    decision = "accept"
+    intervened = False
 
-        # -------------------------
-        # SAKSHI (NO OMEGA)
-        # -------------------------
-       elif MODE == "sakshi":
-       output, state, distortion, decision, intervened = pipeline.run(prompt)
+elif MODE == "sakshi":
+    output, state, distortion, decision, intervened = pipeline.run(prompt)
 
-        # -------------------------
-        # SAKSHI + OMEGA
-        # -------------------------
-       elif MODE == "sakshi_omega":
-       output, state, distortion, decision, intervened = pipeline.run(prompt)
+elif MODE == "sakshi_omega":
+    output, state, distortion, decision, intervened = pipeline.run(prompt)
 
-        else:
-            raise ValueError(f"Invalid MODE: {MODE}")
+else:
+    raise ValueError(f"Invalid MODE: {MODE}")
 
         # -------------------------
         # EVALUATION
