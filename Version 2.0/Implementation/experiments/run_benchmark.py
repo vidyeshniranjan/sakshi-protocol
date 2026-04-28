@@ -60,7 +60,7 @@ for item in prompts:
         # BASELINE
         # -------------------------
         if MODE == "baseline":
-            output = openai_model.generate(prompt)
+            output = openai_model(prompt)
 
             state = None
             distortion = None
