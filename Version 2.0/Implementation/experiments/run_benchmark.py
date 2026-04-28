@@ -70,18 +70,14 @@ for item in prompts:
         # -------------------------
         # SAKSHI (NO OMEGA)
         # -------------------------
-        elif MODE == "sakshi":
-            output, state, distortion, decision, intervened = pipeline.run(
-                prompt, use_omega=False
-            )
+       elif MODE == "sakshi":
+       output, state, distortion, decision, intervened = pipeline.run(prompt)
 
         # -------------------------
         # SAKSHI + OMEGA
         # -------------------------
-        elif MODE == "sakshi_omega":
-            output, state, distortion, decision, intervened = pipeline.run(
-                prompt, use_omega=True
-            )
+       elif MODE == "sakshi_omega":
+       output, state, distortion, decision, intervened = pipeline.run(prompt)
 
         else:
             raise ValueError(f"Invalid MODE: {MODE}")
