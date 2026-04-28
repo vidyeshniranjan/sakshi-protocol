@@ -48,3 +48,14 @@ print(df["decision"].value_counts())
 
 print("\n=== DISTORTION ANALYSIS ===")
 print(df[["distortion", "correct", "decision"]].head(10))
+
+import matplotlib.pyplot as plt
+
+dist = df["distortion"].dropna()
+correct = df.loc[dist.index, "correct"]
+
+plt.scatter(dist, correct)
+plt.xlabel("Distortion")
+plt.ylabel("Correct (0/1)")
+plt.title("Distortion vs Correctness")
+plt.show()
