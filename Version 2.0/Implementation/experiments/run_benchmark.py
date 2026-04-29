@@ -14,7 +14,7 @@ print("Starting benchmark run...")
 # CONFIGURATION
 # =========================
 
-MODE = "sakshi"
+MODE = "sakshi_omega"
 # Options:
 # "baseline"      — raw model output, no Sakshi observer
 # "sakshi"        — Sakshi observer + distortion control, Omega disabled
