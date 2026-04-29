@@ -1,9 +1,9 @@
 def decide(state, distortion):
 
-    if distortion < 0.25:
+    if distortion < 0.3:
         return "accept"
 
-    elif distortion < 0.35:
+    elif distortion < 0.4:
         return "retrieve"   # Ω activation zone
 
     else:
