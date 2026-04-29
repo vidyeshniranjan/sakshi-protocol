@@ -25,7 +25,7 @@ def compute_state(signals):
     I = coh * (1 - unc) * (1 - 0.3 * conf * spec)
 
     # 🔥 Final adjustment (key fix)
-    I = I * (1 - 0.5 * hallucination_risk)
+    I = I * (1 - 0.2 * hallucination_risk)
 
     return {
         "S": S,
