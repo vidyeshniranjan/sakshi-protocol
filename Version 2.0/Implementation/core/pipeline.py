@@ -7,12 +7,17 @@ from core.retriever import retrieve
 
 
 class SakshiPipeline:
-    def __init__(self, model_fn):
+    def __init__(self, model_fn, omega_enabled=False):
         self.generator = Generator(model_fn)
+        self.omega_enabled = omega_enabled
 
     def run(self, prompt):
-
-        intervened = False  # 🔥 NEW
+        # intervened: True whenever the Sakshi observer computed state and
+        # produced a non-trivial control signal (i.e., always in Sakshi mode).
+        # This reflects the paper's notion of state-aware monitoring being active.
+        # Separate from grounded, which records whether Omega was actually invoked.
+        intervened = True
+        grounded = False
 
         # Step 1: initial generation
         output = self.generator.generate(prompt)
@@ -29,9 +34,9 @@ class SakshiPipeline:
         # Step 5: decision
         decision = decide(state, distortion)
 
-        # Step 6: Ω retrieval (grounding)
-        if decision == "retrieve":
-            intervened = True  # 🔥 mark intervention
+        # Step 6: Omega retrieval (grounding) — only if omega_enabled
+        if decision == "retrieve" and self.omega_enabled:
+            grounded = True
 
             context = retrieve(prompt)
 
@@ -56,8 +61,14 @@ If the information is uncertain, say so clearly.
             distortion = compute_distortion(state)
             decision = decide(state, distortion)
 
-            #OPTIONAL: fallback abstain
+            # fallback abstain if still unstable after grounding
             if distortion > 0.35 and state["I"] < 0.4:
                 decision = "abstain"
 
-        return output, state, distortion, decision, intervened
+        elif decision == "retrieve" and not self.omega_enabled:
+            # In Sakshi-only mode (no Omega), retrieve signals elevated risk
+            # but no grounding is available — treat as abstain to avoid
+            # outputting a potentially unreliable response
+            decision = "abstain"
+
+        return output, state, distortion, decision, intervened, grounded
