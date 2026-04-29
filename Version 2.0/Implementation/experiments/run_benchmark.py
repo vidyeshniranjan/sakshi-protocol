@@ -14,25 +14,32 @@ print("Starting benchmark run...")
 # CONFIGURATION
 # =========================
 
-MODE = "sakshi"  
+MODE = "sakshi"
 # Options:
-# "baseline"
-# "sakshi"
-# "sakshi_omega"
+# "baseline"      — raw model output, no Sakshi observer
+# "sakshi"        — Sakshi observer + distortion control, Omega disabled
+# "sakshi_omega"  — Sakshi observer + distortion control + Omega grounding
 
-PROMPTS_FILE = "prompts_test.json"  # your existing prompts
+PROMPTS_FILE = "prompts_test.json"
 
 # =========================
 # INITIALIZE
 # =========================
 
-pipeline = SakshiPipeline(openai_model)
+if MODE == "baseline":
+    pipeline = SakshiPipeline(openai_model, omega_enabled=False)
+elif MODE == "sakshi":
+    pipeline = SakshiPipeline(openai_model, omega_enabled=False)
+elif MODE == "sakshi_omega":
+    pipeline = SakshiPipeline(openai_model, omega_enabled=True)
+else:
+    raise ValueError(f"Invalid MODE: {MODE}")
 
 # Load prompts
 with open(PROMPTS_FILE) as f:
     prompts = json.load(f)
 
-print(f"Loaded {len(prompts)} prompts")
+print(f"Loaded {len(prompts)} prompts | MODE={MODE}")
 
 results = []
 
@@ -41,7 +48,7 @@ results = []
 # =========================
 
 def evaluate(output, gt):
-    if not gt:
+    if not gt or not gt.strip():
         return None
     return int(gt.lower() in output.lower())
 
@@ -58,22 +65,15 @@ for item in prompts:
     try:
         if MODE == "baseline":
             output = pipeline.generator.generate(prompt)
-
             state = None
             distortion = None
             decision = "accept"
             intervened = False
-
-        elif MODE == "sakshi":
-            output, state, distortion, decision, intervened = pipeline.run(prompt)
-
-        elif MODE == "sakshi_omega":
-            output, state, distortion, decision, intervened = pipeline.run(prompt)
+            grounded = False
 
         else:
-            raise ValueError(f"Invalid MODE: {MODE}")
+            output, state, distortion, decision, intervened, grounded = pipeline.run(prompt)
 
-        # evaluation
         correct = evaluate(output, gt)
 
         results.append({
@@ -86,16 +86,17 @@ for item in prompts:
             "state": state,
             "distortion": distortion,
             "decision": decision,
-            "intervened": intervened
+            "intervened": intervened,
+            "grounded": grounded
         })
 
     except Exception as e:
         print(f"Error on prompt {item['id']}: {e}")
+
 # =========================
 # SAVE RESULTS
 # =========================
 
-# Ensure results folder exists
 os.makedirs("../results", exist_ok=True)
 
 output_file = f"../results/{MODE}.json"
