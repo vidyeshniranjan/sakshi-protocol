@@ -11,7 +11,7 @@ df = pd.read_json("../results/sakshi_omega.json")  # change per run
 valid = df[df["correct"].notnull()]
 
 accuracy = valid["correct"].mean()
-hallucination = 1 - accuracy
+hallucination = ((valid["correct"] == 0) & (valid["decision"] == "accept")).mean()
 
 retrieval_rate = (df["decision"] == "retrieve").mean()
 abstention_rate = (df["decision"] == "abstain").mean()
