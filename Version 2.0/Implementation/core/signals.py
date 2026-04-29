@@ -68,14 +68,24 @@ def specificity_score(output):
     return min(len(words) / 150, 1.0)
 
 def confidence_score(output):
+    # NOTE: Common verbs (is, are, was, were) removed — they appear in virtually
+    # every output and caused this score to saturate at 1.0, inflating
+    # hallucination_risk and artificially suppressing I (integration).
+    # Only specific assertive phrases are used here.
     confident_phrases = [
-        "is", "are", "was", "were",
-        "clearly", "definitely", "indeed",
-        "the study shows", "results indicate"
+        "clearly",
+        "definitely",
+        "indeed",
+        "the study shows",
+        "results indicate",
+        "it is proven",
+        "research confirms",
+        "evidence shows",
+        "it has been established",
+        "conclusively"
     ]
 
     output_lower = output.lower()
-
     count = sum(1 for p in confident_phrases if p in output_lower)
 
-    return min(count / 5, 1.0)
+    return min(count / 3, 1.0)
