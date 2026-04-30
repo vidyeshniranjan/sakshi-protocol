@@ -28,7 +28,7 @@ def compute_state(signals):
     # reasoning outputs whose conf/spec are naturally higher due to
     # multi-step structure — not because they are fabricating.
     I_base = coh * (1 - unc) * (1 - 0.3 * conf * spec)
-    I = I_base * (1 - 0.2 * hallucination_risk)
+    I = I_base * (1 - 0.1 * hallucination_risk)
 
     return {
         "S": round(S, 6),
