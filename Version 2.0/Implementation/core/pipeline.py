@@ -22,9 +22,10 @@ class SakshiPipeline:
         self.omega_enabled = omega_enabled
 
     def run(self, prompt, prompt_type=""):
-        # intervened: True only when the controller produced a non-accept
-        # decision — i.e., when the system actually changed behaviour.
-        # accept = observer ran passively, no intervention occurred.
+        # intervened=True, grounded=True, decision=accept is valid:
+        # the system retrieved and grounded, and the post-grounding
+        # decision was accept. Intervention occurred even though
+        # the final output was accepted.
         #
         # grounded: True only when Omega was invoked and regeneration occurred.
         intervened = False
