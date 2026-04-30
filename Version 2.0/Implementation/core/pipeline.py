@@ -6,11 +6,14 @@ from core.controller import decide
 from core.retriever import retrieve
 
 
-# Prompt types where external grounding is beneficial.
-# Pure reasoning prompts (logic puzzles, math, multi-step inference) are
-# excluded because external retrieval cannot help solve them and may
-# actively mislead regeneration by introducing irrelevant context.
+# Prompt types where Omega grounding is meaningful.
+# Reasoning prompts excluded: no external document can help solve a logic
+# puzzle or math problem, and retrieved context actively misleads
+# regeneration by introducing irrelevant factual framing.
 GROUNDABLE_TYPES = {"factual", "hallucination"}
+
+# Post-grounding fallback abstain threshold
+POST_GROUNDING_ABSTAIN_THRESHOLD = 0.35
 
 
 class SakshiPipeline:
@@ -19,14 +22,16 @@ class SakshiPipeline:
         self.omega_enabled = omega_enabled
 
     def run(self, prompt, prompt_type=""):
-        # intervened: True whenever the Sakshi observer computed state and
-        # produced a non-trivial control signal (always True in Sakshi mode).
-        # grounded: True only when Omega was actually invoked.
-        intervened = True
+        # intervened: True only when the controller produced a non-accept
+        # decision — i.e., when the system actually changed behaviour.
+        # accept = observer ran passively, no intervention occurred.
+        #
+        # grounded: True only when Omega was invoked and regeneration occurred.
+        intervened = False
         grounded = False
         distortion_pre_grounding = None
 
-        # Step 1: initial generation
+        # Step 1: generate
         output = self.generator.generate(prompt)
 
         # Step 2: extract signals
@@ -38,23 +43,25 @@ class SakshiPipeline:
         # Step 4: compute distortion
         distortion = compute_distortion(state)
 
-        # Step 5: decision
-        decision = decide(state, distortion)
+        # Step 5: type-aware decision
+        decision = decide(state, distortion, prompt_type=prompt_type)
 
-        # Step 6: Omega retrieval (grounding)
+        # Step 6: mark intervention if controller fired
+        if decision in ("retrieve", "abstain"):
+            intervened = True
+
+        # Step 7: Omega grounding
         if decision == "retrieve" and self.omega_enabled:
 
             if prompt_type in GROUNDABLE_TYPES:
-                # Save pre-grounding distortion before regeneration overwrites it.
-                # This allows the paper to show that grounded cases had genuinely
-                # elevated distortion before Omega was invoked.
+                # Record pre-grounding distortion — this is what triggered
+                # the retrieve decision and is the value to report in the paper.
                 distortion_pre_grounding = distortion
                 grounded = True
 
                 context = retrieve(prompt)
 
-                grounded_prompt = f"""
-Answer the question using ONLY the verified information below.
+                grounded_prompt = f"""Answer the question using ONLY the verified information below.
 
 Question:
 {prompt}
@@ -62,29 +69,27 @@ Question:
 Verified Context:
 {context}
 
-If the information is uncertain, say so clearly.
-"""
+If the information is uncertain, say so clearly."""
 
-                # Regenerate grounded answer
                 output = self.generator.generate(grounded_prompt)
 
-                # Recompute signals and state after grounding
+                # Recompute after grounding
                 signals = extract_signals(prompt, output)
                 state = compute_state(signals)
                 distortion = compute_distortion(state)
-                decision = decide(state, distortion)
+                decision = decide(state, distortion, prompt_type=prompt_type)
 
                 # Fallback abstain if still unstable after grounding
-                if distortion > 0.35 and state["I"] < 0.4:
+                if distortion > POST_GROUNDING_ABSTAIN_THRESHOLD and state["I"] < 0.4:
                     decision = "abstain"
 
             else:
-                # Reasoning/ambiguous prompts: retrieve signals elevated risk
-                # but external grounding cannot help — abstain instead.
+                # retrieve on non-groundable type: abstain
+                # (no external source can help with reasoning/ambiguous prompts)
                 decision = "abstain"
 
         elif decision == "retrieve" and not self.omega_enabled:
-            # Sakshi-only mode: no Omega available — treat retrieve as abstain.
+            # Sakshi-only mode: retrieve signals risk but Omega unavailable
             decision = "abstain"
 
         return output, state, distortion, distortion_pre_grounding, decision, intervened, grounded
