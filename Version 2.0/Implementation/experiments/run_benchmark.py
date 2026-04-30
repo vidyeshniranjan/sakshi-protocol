@@ -2,7 +2,6 @@ import sys
 import os
 import json
 
-# Allow imports from project root
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from core.model import openai_model
@@ -14,7 +13,7 @@ print("Starting benchmark run...")
 # CONFIGURATION
 # =========================
 
-MODE = "sakshi_omega"
+MODE = "sakshi"
 # Options:
 # "baseline"      — raw model output, no Sakshi observer
 # "sakshi"        — Sakshi observer + distortion control, Omega disabled
@@ -35,7 +34,6 @@ elif MODE == "sakshi_omega":
 else:
     raise ValueError(f"Invalid MODE: {MODE}")
 
-# Load prompts
 with open(PROMPTS_FILE) as f:
     prompts = json.load(f)
 
@@ -59,40 +57,47 @@ def evaluate(output, gt):
 for item in prompts:
     print(f"Running prompt {item['id']}...")
 
-    prompt = item["prompt"]
+    prompt      = item["prompt"]
     prompt_type = item.get("type", "")
-    gt = item.get("answer", "")
+    gt          = item.get("answer", "")
 
     try:
         if MODE == "baseline":
             output = pipeline.generator.generate(prompt)
-            state = None
-            distortion = None
+            state                  = None
+            distortion             = None
             distortion_pre_grounding = None
-            decision = "accept"
-            intervened = False
-            grounded = False
+            decision               = "accept"
+            intervened             = False   # observer never ran
+            grounded               = False
 
         else:
-            output, state, distortion, distortion_pre_grounding, decision, intervened, grounded = pipeline.run(
+            (output, state, distortion, distortion_pre_grounding,
+             decision, intervened, grounded) = pipeline.run(
                 prompt, prompt_type=prompt_type
             )
 
         correct = evaluate(output, gt)
 
         results.append({
-            "id": item["id"],
-            "type": prompt_type,
-            "prompt": prompt,
-            "output": output,
-            "ground_truth": gt,
-            "correct": correct,
-            "state": state,
-            "distortion": distortion,
+            "id":                     item["id"],
+            "type":                   prompt_type,
+            "prompt":                 prompt,
+            "output":                 output,
+            "ground_truth":           gt,
+            "correct":                correct,
+            "state":                  state,
+            "distortion":             distortion,
+            # distortion value BEFORE Omega regeneration.
+            # Non-null only when grounded=True.
+            # This is the value that triggered the retrieve decision.
             "distortion_pre_grounding": distortion_pre_grounding,
-            "decision": decision,
-            "intervened": intervened,
-            "grounded": grounded
+            "decision":               decision,
+            # intervened=True  → controller fired retrieve or abstain
+            # intervened=False → output accepted without modification
+            "intervened":             intervened,
+            # grounded=True → Omega was invoked, regeneration occurred
+            "grounded":               grounded
         })
 
     except Exception as e:
@@ -103,7 +108,6 @@ for item in prompts:
 # =========================
 
 os.makedirs("../results", exist_ok=True)
-
 output_file = f"../results/{MODE}.json"
 
 with open(output_file, "w") as f:
