@@ -22,10 +22,14 @@ class SakshiPipeline:
         self.omega_enabled = omega_enabled
 
     def run(self, prompt, prompt_type=""):
-        # intervened=True, grounded=True, decision=accept is valid:
-        # the system retrieved and grounded, and the post-grounding
-        # decision was accept. Intervention occurred even though
-        # the final output was accepted.
+        # intervened: True when the controller produced retrieve or abstain
+        # — i.e., when the system actually changed behaviour.
+        # accept = observer ran passively, output unchanged.
+        #
+        # Note: intervened=True, grounded=True, decision=accept is valid —
+        # it means the system retrieved and grounded, and the post-grounding
+        # decision was accept. Intervention occurred even though the final
+        # output was accepted without further modification.
         #
         # grounded: True only when Omega was invoked and regeneration occurred.
         intervened = False
@@ -56,12 +60,16 @@ class SakshiPipeline:
 
             if prompt_type in GROUNDABLE_TYPES:
                 # Record pre-grounding distortion — this is what triggered
-                # the retrieve decision and is the value to report in the paper.
+                # the retrieve decision and is the honest value to report.
                 distortion_pre_grounding = distortion
                 grounded = True
 
                 context = retrieve(prompt)
 
+                # Tightly constrained grounded prompt.
+                # "Only if directly relevant" prevents the model from forcing
+                # an answer out of tangentially related Wikipedia content,
+                # which was causing correct factual answers to be overwritten.
                 grounded_prompt = f"""Answer this specific question concisely and directly.
 Use the verified context below only if it is directly relevant.
 If the context does not answer the question, say you are uncertain.
@@ -71,8 +79,6 @@ Question:
 
 Verified Context:
 {context}"""
-
-If the information is uncertain, say so clearly."""
 
                 output = self.generator.generate(grounded_prompt)
 
@@ -88,7 +94,6 @@ If the information is uncertain, say so clearly."""
 
             else:
                 # retrieve on non-groundable type: abstain
-                # (no external source can help with reasoning/ambiguous prompts)
                 decision = "abstain"
 
         elif decision == "retrieve" and not self.omega_enabled:
