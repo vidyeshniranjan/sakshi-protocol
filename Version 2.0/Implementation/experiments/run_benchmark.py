@@ -14,7 +14,7 @@ print("Starting benchmark run...")
 # CONFIGURATION
 # =========================
 
-MODE = "sakshi_omega"
+MODE = "sakshi"
 # Options:
 # "baseline"      — raw model output, no Sakshi observer
 # "sakshi"        — Sakshi observer + distortion control, Omega disabled
@@ -60,6 +60,7 @@ for item in prompts:
     print(f"Running prompt {item['id']}...")
 
     prompt = item["prompt"]
+    prompt_type = item.get("type", "")
     gt = item.get("answer", "")
 
     try:
@@ -67,24 +68,28 @@ for item in prompts:
             output = pipeline.generator.generate(prompt)
             state = None
             distortion = None
+            distortion_pre_grounding = None
             decision = "accept"
             intervened = False
             grounded = False
 
         else:
-            output, state, distortion, decision, intervened, grounded = pipeline.run(prompt)
+            output, state, distortion, distortion_pre_grounding, decision, intervened, grounded = pipeline.run(
+                prompt, prompt_type=prompt_type
+            )
 
         correct = evaluate(output, gt)
 
         results.append({
             "id": item["id"],
-            "type": item.get("type", ""),
+            "type": prompt_type,
             "prompt": prompt,
             "output": output,
             "ground_truth": gt,
             "correct": correct,
             "state": state,
             "distortion": distortion,
+            "distortion_pre_grounding": distortion_pre_grounding,
             "decision": decision,
             "intervened": intervened,
             "grounded": grounded
