@@ -11,7 +11,7 @@
 
 THRESHOLDS = {
     "factual":       {"accept": 0.30, "retrieve": 0.40},
-    "hallucination": {"accept": 0.25, "retrieve": 0.35},
+    "hallucination": {"accept": 0.25, "retrieve": 0.45},
     "reasoning":     {"accept": 0.32, "retrieve": 0.42},
     "ambiguous":     {"accept": 0.30, "retrieve": 0.40},
 }
