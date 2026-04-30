@@ -61,13 +61,15 @@ class SakshiPipeline:
 
                 context = retrieve(prompt)
 
-                grounded_prompt = f"""Answer the question using ONLY the verified information below.
+                grounded_prompt = f"""Answer this specific question concisely and directly.
+Use the verified context below only if it is directly relevant.
+If the context does not answer the question, say you are uncertain.
 
 Question:
 {prompt}
 
 Verified Context:
-{context}
+{context}"""
 
 If the information is uncertain, say so clearly."""
 
