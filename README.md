@@ -83,7 +83,7 @@ Run the benchmark on a single model with the bundled sample prompts:
 python benchmarks/run_benchmark.py \
   --model claude-sonnet-4-6 \
   --mode sakshi \
-  --prompts prompts/sample_prompts.json
+  --prompts benchmarks/prompts/sample_prompts.json
 ```
 
 Keys are read from environment variables (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, `TOGETHER_API_KEY`). Nothing is hardcoded.
