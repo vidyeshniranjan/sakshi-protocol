@@ -1,0 +1,3260 @@
+[
+  {
+    "id": "F001",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "factual",
+    "domain": "historical",
+    "class": "",
+    "prompt": "Which ancient civilization built Machu Picchu?",
+    "output": "Machu Picchu was built by the **Inca** civilization, most likely constructed in the mid-15th century during the reign of Emperor **Pachacuti** (around 1450–1460 AD). It is located in present-day Peru in the Andes Mountains.",
+    "ground_truth": "inca",
+    "correct": 1,
+    "elapsed_s": 9.62,
+    "state": {
+      "S": 0.861091,
+      "R": 0.147059,
+      "T": 0.068,
+      "V": 0.032,
+      "I": 0.789738,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.088469,
+    "D_factual": 0.071719,
+    "D_reasoning": 0.183382,
+    "D_pre_grounding": null,
+    "decision": "accept",
+    "effective_decision": "accept",
+    "intervened": false,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.008,
+        "risk_level": "low",
+        "domain": "historical",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 1,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: historical"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Machu Picchu",
+            "entity_type": "general",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "historical",
+        "llm_query": "Machu Picchu ancient civilization built"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [],
+      "mean_distortion": 0.0,
+      "peak_distortion": 0.0,
+      "peak_segment": 0,
+      "drift_score": 0.0,
+      "inflection_count": 0,
+      "trajectory_shape": "stable",
+      "segment_count": 0,
+      "skipped": true
+    },
+    "abstention": null,
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "F061",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "factual",
+    "domain": "literary",
+    "class": "",
+    "prompt": "Who wrote the novel 1984?",
+    "output": "The novel *1984* was written by **George Orwell** (the pen name of Eric Arthur Blair). It was published in **1949**.",
+    "ground_truth": "george orwell",
+    "correct": 1,
+    "elapsed_s": 3.93,
+    "state": {
+      "S": 0.795396,
+      "R": 0.05,
+      "T": 0.04,
+      "V": 0.06,
+      "I": 0.879605,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.096785,
+    "D_factual": 0.089626,
+    "D_reasoning": 0.137352,
+    "D_pre_grounding": null,
+    "decision": "accept",
+    "effective_decision": "accept",
+    "intervened": false,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.008,
+        "risk_level": "low",
+        "domain": "literary",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 1,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: literary"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "1984",
+            "entity_type": "religious_text",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "literary",
+        "llm_query": "1984 novel author"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [],
+      "mean_distortion": 0.0,
+      "peak_distortion": 0.0,
+      "peak_segment": 0,
+      "drift_score": 0.0,
+      "inflection_count": 0,
+      "trajectory_shape": "stable",
+      "segment_count": 0,
+      "skipped": true
+    },
+    "abstention": null,
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "R001",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "reasoning",
+    "domain": "mathematical",
+    "class": "",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1 more than the ball. How much does the ball cost?",
+    "output": "## The Classic Brain Teaser\n\nMost people's instinct is to answer **10 cents**, but let's check that:\n\n- If the ball = $0.10, then the bat = $1.10\n- Total = $1.20 ❌ (not $1.10)\n\n## The Correct Solution\n\nLet the ball cost **x** cents.\nThen the bat costs **x + $1.00**.\n\n$$x + (x + 1.00) = 1.10$$\n$$2x + 1.00 = 1.10$$\n$$2x = 0.10$$\n$$x = 0.05$$\n\n## The ball costs **$0.05 (5 cents)**\n\n**Check:** Ball = $0.05, Bat = $1.05 → Total = $1.10 ✅\n\nThis is a well-known example of how our intuitive thinking can lead us to the wrong answer.",
+    "ground_truth": "0.05",
+    "correct": 1,
+    "elapsed_s": 15.11,
+    "state": {
+      "S": 0.698822,
+      "R": 0.301887,
+      "T": 0.212,
+      "V": 0.1,
+      "I": 0.698113,
+      "step_consistency": 1.0,
+      "contradiction_score": 0.0
+    },
+    "D_combined": 0.189375,
+    "D_factual": 0.285176,
+    "D_reasoning": 0.165425,
+    "D_pre_grounding": null,
+    "decision": "accept",
+    "effective_decision": "accept",
+    "intervened": false,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.028,
+        "risk_level": "low",
+        "domain": "general",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": true,
+        "named_entity_count": 0,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.015,
+        "entity_check_needed": false,
+        "flags": [
+          "high_specificity_markers (count=2)"
+        ]
+      },
+      "screener_result": {
+        "entities": [],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "general",
+        "llm_query": ""
+      },
+      "combined_threshold_adjust": 0.015,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 17,
+          "D_factual": 0.229871,
+          "D_reasoning": 0.114677,
+          "D_combined": 0.137716,
+          "S": 0.38161,
+          "R": 0.0,
+          "T": 0.034,
+          "V": 0.066,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 18,
+          "D_factual": 0.063927,
+          "D_reasoning": 0.21242,
+          "D_combined": 0.182722,
+          "S": 0.864402,
+          "R": 0.222222,
+          "T": 0.036,
+          "V": 0.064,
+          "I": 0.720145,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 17,
+          "D_factual": 0.07853,
+          "D_reasoning": 0.140485,
+          "D_combined": 0.128094,
+          "S": 0.823565,
+          "R": 0.058824,
+          "T": 0.034,
+          "V": 0.066,
+          "I": 0.871435,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 18,
+          "D_factual": 0.223277,
+          "D_reasoning": 0.309918,
+          "D_combined": 0.29259,
+          "S": 0.392696,
+          "R": 0.444444,
+          "T": 0.036,
+          "V": 0.064,
+          "I": 0.514389,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 19,
+          "D_factual": 0.073684,
+          "D_reasoning": 0.161352,
+          "D_combined": 0.143819,
+          "S": 0.839615,
+          "R": 0.105263,
+          "T": 0.038,
+          "V": 0.062,
+          "I": 0.828437,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 5,
+          "word_count": 17,
+          "D_factual": 0.325796,
+          "D_reasoning": 0.114677,
+          "D_combined": 0.156901,
+          "S": 0.100744,
+          "R": 0.0,
+          "T": 0.034,
+          "V": 0.066,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.1736,
+      "peak_distortion": 0.2926,
+      "peak_segment": 3,
+      "drift_score": 0.0411,
+      "inflection_count": 4,
+      "trajectory_shape": "volatile",
+      "segment_count": 6,
+      "skipped": false
+    },
+    "abstention": null,
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HA002",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "medical",
+    "class": "A",
+    "prompt": "What is the exact recommended dosage of Veranexil for treatment-resistant depression in patients over 65, and what are the primary contraindications listed in the FDA label?",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe system identified named entities in this prompt that could not be verified in authoritative databases prior to generation. The output carries elevated risk of entity fabrication — the model may have generated plausible but unverifiable claims about entities whose existence has not been confirmed.\n\n[VERIFIED RESIDUE]\nNo verified residue could be extracted. All specific claims in this output require independent verification.\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Specific entity claims: Named entities in the prompt could not be verified in authoritative databases. Claims about specific named entities are excluded from the verified residue.\n\n[CONFIDENCE NOTE]\nEntity existence could not be confirmed prior to generation. Claims about specific named entities should be independently verified before relying on this output.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 18.57,
+    "state": {
+      "S": 0.671076,
+      "R": 0.272727,
+      "T": 0.286,
+      "V": 0.1,
+      "I": 0.448922,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.34598,
+    "D_factual": 0.347266,
+    "D_reasoning": 0.334413,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.248,
+        "risk_level": "medium",
+        "domain": "medical",
+        "fabrication_prone": true,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 1,
+        "conjunctive_load": 0,
+        "threshold_adjust": -0.02,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: medical",
+          "fabrication_prone_pattern (weight=0.80)"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Veranexil",
+            "entity_type": "drug",
+            "found_in": [],
+            "databases_checked": [
+              "FDA"
+            ],
+            "absence_score": 1.0,
+            "fabrication_risk": 1.0,
+            "notes": [
+              "FDA: not found in FDA drug database (404)"
+            ]
+          }
+        ],
+        "high_risk_entities": [
+          "Veranexil"
+        ],
+        "max_absence_score": 1.0,
+        "aggregate_risk": 1.0,
+        "omega_prearm": true,
+        "threshold_adjust": -0.05,
+        "spacy_available": false,
+        "domain": "medical",
+        "llm_query": "Veranexil dosage treatment-resistant depression elderly FDA label contraindications"
+      },
+      "combined_threshold_adjust": -0.07,
+      "omega_prearm": false,
+      "context_retrievable": false
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 22,
+          "D_factual": 0.158053,
+          "D_reasoning": 0.135851,
+          "D_combined": 0.155833,
+          "S": 0.596718,
+          "R": 0.045455,
+          "T": 0.044,
+          "V": 0.056,
+          "I": 0.883813,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 33,
+          "D_factual": 0.2717,
+          "D_reasoning": 0.171796,
+          "D_combined": 0.26171,
+          "S": 0.266544,
+          "R": 0.121212,
+          "T": 0.066,
+          "V": 0.034,
+          "I": 0.81367,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 31,
+          "D_factual": 0.187583,
+          "D_reasoning": 0.218387,
+          "D_combined": 0.190663,
+          "S": 0.508841,
+          "R": 0.064516,
+          "T": 0.062,
+          "V": 0.038,
+          "I": 0.6323,
+          "uncertainty": 0.27,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 39,
+          "D_factual": 0.171611,
+          "D_reasoning": 0.18759,
+          "D_combined": 0.173209,
+          "S": 0.566562,
+          "R": 0.153846,
+          "T": 0.078,
+          "V": 0.022,
+          "I": 0.783454,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 18,
+          "D_factual": 0.239839,
+          "D_reasoning": 0.114923,
+          "D_combined": 0.227347,
+          "S": 0.353406,
+          "R": 0.0,
+          "T": 0.036,
+          "V": 0.064,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.2018,
+      "peak_distortion": 0.2617,
+      "peak_segment": 1,
+      "drift_score": 0.0545,
+      "inflection_count": 2,
+      "trajectory_shape": "stable",
+      "segment_count": 5,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "entity_fabrication_risk",
+      "signal_breakdown": {
+        "D_combined": 0.346,
+        "D_factual": 0.3473,
+        "D_reasoning": 0.3344,
+        "stability": 0.6711,
+        "reactivity": 0.2727,
+        "integration": 0.4489,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1,
+        "entity_fabrication_risk": 1.0,
+        "fabrication_prone": true,
+        "high_risk_entities": [
+          "Veranexil"
+        ]
+      },
+      "annotation": "The system identified named entities in this prompt that could not be verified in authoritative databases prior to generation. The output carries elevated risk of entity fabrication — the model may have generated plausible but unverifiable claims about entities whose existence has not been confirmed.",
+      "verified_residue": "No verified residue could be extracted. All specific claims in this output require independent verification.",
+      "eliminated": [
+        [
+          "Specific entity claims",
+          "Named entities in the prompt could not be verified in authoritative databases. Claims about specific named entities are excluded from the verified residue."
+        ]
+      ],
+      "confidence_note": "Entity existence could not be confirmed prior to generation. Claims about specific named entities should be independently verified before relying on this output.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.346
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": false,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HA003",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "medical",
+    "class": "A",
+    "prompt": "Describe the mechanism of action of Cortazimab in treating autoimmune encephalitis.",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.\n\n[VERIFIED RESIDUE]\n# Cortazimab in Autoimmune Encephalitis  I need to be transparent with you: **\"Cortazimab\" does not appear in my knowledge base** as a recognized or approved therapeutic agent as of my knowledge cutoff (early 2025). ## Possibilities to Consider  This name could refer to:  1. [Partial — full output uncertainty exceeds acceptance threshold.]\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Full output: Distortion D_combined=0.213 exceeded abstention threshold. Only opening statements included as partial residue.\n\n[CONFIDENCE NOTE]\nThis output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 16.28,
+    "state": {
+      "S": 0.746306,
+      "R": 0.308989,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.213269,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.315638,
+    "D_factual": 0.304684,
+    "D_reasoning": 0.414223,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "domain": "general",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 0,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": false,
+        "flags": []
+      },
+      "screener_result": {
+        "entities": [],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "general",
+        "llm_query": ""
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 34,
+          "D_factual": 0.106974,
+          "D_reasoning": 0.240863,
+          "D_combined": 0.120363,
+          "S": 0.748557,
+          "R": 0.117647,
+          "T": 0.068,
+          "V": 0.032,
+          "I": 0.588219,
+          "uncertainty": 0.28,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 20,
+          "D_factual": 0.310691,
+          "D_reasoning": 0.115415,
+          "D_combined": 0.291163,
+          "S": 0.147187,
+          "R": 0.0,
+          "T": 0.04,
+          "V": 0.06,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 21,
+          "D_factual": 0.249422,
+          "D_reasoning": 0.136554,
+          "D_combined": 0.238135,
+          "S": 0.326908,
+          "R": 0.047619,
+          "T": 0.042,
+          "V": 0.058,
+          "I": 0.88181,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 19,
+          "D_factual": 0.192296,
+          "D_reasoning": 0.115169,
+          "D_combined": 0.184583,
+          "S": 0.493873,
+          "R": 0.0,
+          "T": 0.038,
+          "V": 0.062,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 48,
+          "D_factual": 0.155674,
+          "D_reasoning": 0.277694,
+          "D_combined": 0.167876,
+          "S": 0.609264,
+          "R": 0.354167,
+          "T": 0.096,
+          "V": 0.004,
+          "I": 0.597977,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 5,
+          "word_count": 36,
+          "D_factual": 0.270911,
+          "D_reasoning": 0.240697,
+          "D_combined": 0.26789,
+          "S": 0.261223,
+          "R": 0.111111,
+          "T": 0.072,
+          "V": 0.028,
+          "I": 0.587089,
+          "uncertainty": 0.286667,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.2117,
+      "peak_distortion": 0.2912,
+      "peak_segment": 1,
+      "drift_score": 0.0898,
+      "inflection_count": 2,
+      "trajectory_shape": "stable",
+      "segment_count": 6,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "elevated_distortion",
+      "signal_breakdown": {
+        "D_combined": 0.3156,
+        "D_factual": 0.3047,
+        "D_reasoning": 0.4142,
+        "stability": 0.7463,
+        "reactivity": 0.309,
+        "integration": 0.2133,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1
+      },
+      "annotation": "The output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.",
+      "verified_residue": "# Cortazimab in Autoimmune Encephalitis  I need to be transparent with you: **\"Cortazimab\" does not appear in my knowledge base** as a recognized or approved therapeutic agent as of my knowledge cutoff (early 2025). ## Possibilities to Consider  This name could refer to:  1. [Partial — full output uncertainty exceeds acceptance threshold.]",
+      "eliminated": [
+        [
+          "Full output",
+          "Distortion D_combined=0.213 exceeded abstention threshold. Only opening statements included as partial residue."
+        ]
+      ],
+      "confidence_note": "This output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3156
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HA011",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "medical",
+    "class": "A",
+    "prompt": "What is the recommended titration schedule for Quentirapide in first-episode psychosis?",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.\n\n[VERIFIED RESIDUE]\n\"Quentirapide\" doesn't appear in my knowledge base as a recognized medication name. This could be:  1. [Partial — full output uncertainty exceeds acceptance threshold.]\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Full output: Distortion D_combined=0.704 exceeded abstention threshold. Only opening statements included as partial residue.\n\n[CONFIDENCE NOTE]\nThis output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 13.51,
+    "state": {
+      "S": 0.750554,
+      "R": 0.239437,
+      "T": 0.284,
+      "V": 0.1,
+      "I": 0.704205,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.370265,
+    "D_factual": 0.383573,
+    "D_reasoning": 0.250496,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.0,
+        "risk_level": "low",
+        "domain": "general",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 0,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": false,
+        "flags": []
+      },
+      "screener_result": {
+        "entities": [],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "general",
+        "llm_query": ""
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 15,
+          "D_factual": 0.191674,
+          "D_reasoning": 0.114185,
+          "D_combined": 0.183925,
+          "S": 0.491103,
+          "R": 0.0,
+          "T": 0.03,
+          "V": 0.07,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 20,
+          "D_factual": 0.210247,
+          "D_reasoning": 0.137352,
+          "D_combined": 0.202958,
+          "S": 0.441086,
+          "R": 0.05,
+          "T": 0.04,
+          "V": 0.06,
+          "I": 0.879605,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 18,
+          "D_factual": 0.134722,
+          "D_reasoning": 0.114923,
+          "D_combined": 0.132742,
+          "S": 0.66152,
+          "R": 0.0,
+          "T": 0.036,
+          "V": 0.064,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 40,
+          "D_factual": 0.127713,
+          "D_reasoning": 0.208086,
+          "D_combined": 0.13575,
+          "S": 0.69644,
+          "R": 0.2,
+          "T": 0.08,
+          "V": 0.02,
+          "I": 0.74072,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 32,
+          "D_factual": 0.195924,
+          "D_reasoning": 0.200633,
+          "D_combined": 0.196395,
+          "S": 0.488949,
+          "R": 0.1875,
+          "T": 0.064,
+          "V": 0.036,
+          "I": 0.752294,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 5,
+          "word_count": 17,
+          "D_factual": 0.259592,
+          "D_reasoning": 0.114677,
+          "D_combined": 0.245101,
+          "S": 0.294587,
+          "R": 0.0,
+          "T": 0.034,
+          "V": 0.066,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.1828,
+      "peak_distortion": 0.2451,
+      "peak_segment": 5,
+      "drift_score": 0.0826,
+      "inflection_count": 2,
+      "trajectory_shape": "stable",
+      "segment_count": 6,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "elevated_distortion",
+      "signal_breakdown": {
+        "D_combined": 0.3703,
+        "D_factual": 0.3836,
+        "D_reasoning": 0.2505,
+        "stability": 0.7506,
+        "reactivity": 0.2394,
+        "integration": 0.7042,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1
+      },
+      "annotation": "The output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.",
+      "verified_residue": "\"Quentirapide\" doesn't appear in my knowledge base as a recognized medication name. This could be:  1. [Partial — full output uncertainty exceeds acceptance threshold.]",
+      "eliminated": [
+        [
+          "Full output",
+          "Distortion D_combined=0.704 exceeded abstention threshold. Only opening statements included as partial residue."
+        ]
+      ],
+      "confidence_note": "This output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3703
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HA026",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "legal",
+    "class": "A",
+    "prompt": "What was the majority opinion in Harrington v. Caldwell Systems Inc. (2019) regarding piercing the corporate veil in cases of fraudulent misrepresentation?",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.\n\n[VERIFIED RESIDUE]\nHarrington v. Caldwell Systems Inc. [Partial — full output uncertainty exceeds acceptance threshold.]\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Full output: Distortion D_combined=0.645 exceeded abstention threshold. Only opening statements included as partial residue.\n\n[CONFIDENCE NOTE]\nThis output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 20.88,
+    "state": {
+      "S": 0.721926,
+      "R": 0.303797,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.644614,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.389795,
+    "D_factual": 0.401917,
+    "D_reasoning": 0.280703,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.016,
+        "risk_level": "low",
+        "domain": "legal",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 2,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: legal"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Harrington v. Caldwell Systems Inc.",
+            "entity_type": "legal_case",
+            "found_in": [],
+            "databases_checked": [
+              "CourtListener"
+            ],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": [
+              "CourtListener: query failed: HTTP Error 403: Forbidden"
+            ]
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "legal",
+        "llm_query": "Harrington v. Caldwell Systems Inc. 2019 corporate veil fraudulent misrepresentation"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 45,
+          "D_factual": 0.158247,
+          "D_reasoning": 0.150819,
+          "D_combined": 0.157504,
+          "S": 0.612984,
+          "R": 0.066667,
+          "T": 0.09,
+          "V": 0.01,
+          "I": 0.864173,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 43,
+          "D_factual": 0.253122,
+          "D_reasoning": 0.223109,
+          "D_combined": 0.250121,
+          "S": 0.321137,
+          "R": 0.232558,
+          "T": 0.086,
+          "V": 0.014,
+          "I": 0.710575,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 29,
+          "D_factual": 0.253965,
+          "D_reasoning": 0.178146,
+          "D_combined": 0.246383,
+          "S": 0.316587,
+          "R": 0.137931,
+          "T": 0.058,
+          "V": 0.042,
+          "I": 0.79819,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 41,
+          "D_factual": 0.146587,
+          "D_reasoning": 0.163388,
+          "D_combined": 0.148267,
+          "S": 0.644635,
+          "R": 0.097561,
+          "T": 0.082,
+          "V": 0.018,
+          "I": 0.835568,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.2006,
+      "peak_distortion": 0.2501,
+      "peak_segment": 1,
+      "drift_score": -0.0314,
+      "inflection_count": 1,
+      "trajectory_shape": "stable",
+      "segment_count": 4,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "elevated_distortion",
+      "signal_breakdown": {
+        "D_combined": 0.3898,
+        "D_factual": 0.4019,
+        "D_reasoning": 0.2807,
+        "stability": 0.7219,
+        "reactivity": 0.3038,
+        "integration": 0.6446,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1
+      },
+      "annotation": "The output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.",
+      "verified_residue": "Harrington v. Caldwell Systems Inc. [Partial — full output uncertainty exceeds acceptance threshold.]",
+      "eliminated": [
+        [
+          "Full output",
+          "Distortion D_combined=0.645 exceeded abstention threshold. Only opening statements included as partial residue."
+        ]
+      ],
+      "confidence_note": "This output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3898
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HA028",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "legal",
+    "class": "A",
+    "prompt": "Under the Algorithmic Transparency and Accountability Act 2022, what disclosure requirements apply to AI-driven hiring systems?",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.\n\n[VERIFIED RESIDUE]\nI need to be straightforward with you about the limits of my knowledge here. ## Honest Assessment  **I cannot verify that an \"Algorithmic Transparency and Accountability Act 2022\" exists as a enacted federal US law** with that specific name. [Partial — full output uncertainty exceeds acceptance threshold.]\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Full output: Distortion D_combined=0.238 exceeded abstention threshold. Only opening statements included as partial residue.\n\n[CONFIDENCE NOTE]\nThis output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 17.81,
+    "state": {
+      "S": 0.735915,
+      "R": 0.229358,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.237846,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.319703,
+    "D_factual": 0.311402,
+    "D_reasoning": 0.39441,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.032,
+        "risk_level": "low",
+        "domain": "legal",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 4,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: legal",
+          "high_named_entity_density (count=4)"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Algorithmic Transparency and Accountability Act 2022",
+            "entity_type": "legal_statute",
+            "found_in": [],
+            "databases_checked": [
+              "CourtListener"
+            ],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": [
+              "CourtListener: query failed: HTTP Error 403: Forbidden"
+            ]
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "legal",
+        "llm_query": "Algorithmic Transparency and Accountability Act 2022 AI hiring disclosure"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 17,
+          "D_factual": 0.269121,
+          "D_reasoning": 0.114677,
+          "D_combined": 0.253677,
+          "S": 0.266686,
+          "R": 0.0,
+          "T": 0.034,
+          "V": 0.066,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 35,
+          "D_factual": 0.176184,
+          "D_reasoning": 0.312238,
+          "D_combined": 0.18979,
+          "S": 0.534087,
+          "R": 0.114286,
+          "T": 0.07,
+          "V": 0.03,
+          "I": 0.355369,
+          "uncertainty": 0.566667,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 16,
+          "D_factual": 0.122154,
+          "D_reasoning": 0.114431,
+          "D_combined": 0.121381,
+          "S": 0.695616,
+          "R": 0.0,
+          "T": 0.032,
+          "V": 0.068,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 63,
+          "D_factual": 0.134504,
+          "D_reasoning": 0.216533,
+          "D_combined": 0.142707,
+          "S": 0.763873,
+          "R": 0.206349,
+          "T": 0.126,
+          "V": 0.026,
+          "I": 0.734841,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 21,
+          "D_factual": 0.286768,
+          "D_reasoning": 0.115662,
+          "D_combined": 0.269657,
+          "S": 0.218231,
+          "R": 0.0,
+          "T": 0.042,
+          "V": 0.058,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 5,
+          "word_count": 20,
+          "D_factual": 0.194338,
+          "D_reasoning": 0.115415,
+          "D_combined": 0.186446,
+          "S": 0.488958,
+          "R": 0.0,
+          "T": 0.04,
+          "V": 0.06,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 6,
+          "word_count": 46,
+          "D_factual": 0.269344,
+          "D_reasoning": 0.150428,
+          "D_combined": 0.257452,
+          "S": 0.280233,
+          "R": 0.065217,
+          "T": 0.092,
+          "V": 0.008,
+          "I": 0.865516,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.203,
+      "peak_distortion": 0.2697,
+      "peak_segment": 4,
+      "drift_score": 0.0546,
+      "inflection_count": 3,
+      "trajectory_shape": "volatile",
+      "segment_count": 7,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "elevated_distortion",
+      "signal_breakdown": {
+        "D_combined": 0.3197,
+        "D_factual": 0.3114,
+        "D_reasoning": 0.3944,
+        "stability": 0.7359,
+        "reactivity": 0.2294,
+        "integration": 0.2378,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1
+      },
+      "annotation": "The output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.",
+      "verified_residue": "I need to be straightforward with you about the limits of my knowledge here. ## Honest Assessment  **I cannot verify that an \"Algorithmic Transparency and Accountability Act 2022\" exists as a enacted federal US law** with that specific name. [Partial — full output uncertainty exceeds acceptance threshold.]",
+      "eliminated": [
+        [
+          "Full output",
+          "Distortion D_combined=0.238 exceeded abstention threshold. Only opening statements included as partial residue."
+        ]
+      ],
+      "confidence_note": "This output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3197
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HA047",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "academic",
+    "class": "A",
+    "prompt": "Summarise Professor Yuki Tanaka-Osei's seminal 2019 paper on quantum coherence in photosynthetic organisms published in Nature Biophysics.",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.\n\n[VERIFIED RESIDUE]\nProfessor Yuki Tanaka-Osei and a 2019 paper in \"Nature Biophysics\" on quantum coherence in photosynthetic organisms aren't something I can verify — and I want to be straightforward with you rather than fabricate details. A few possibilities worth noting:  - **The researcher may not exist**, or the name/details may be slightly different from what I have in my training data - **\"Nature Biophysics\"** isn't a journal I can confirm exists as a distinct publication (there is *Nature Physics*, *Nature Chemical Biology*, etc. [Partial — full output uncertainty exceeds acceptance threshold.]\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Full output: Distortion D_combined=0.671 exceeded abstention threshold. Only opening statements included as partial residue.\n\n[CONFIDENCE NOTE]\nThis output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 14.74,
+    "state": {
+      "S": 0.836304,
+      "R": 0.27551,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.670805,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.380228,
+    "D_factual": 0.392665,
+    "D_reasoning": 0.268292,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.032,
+        "risk_level": "low",
+        "domain": "academic",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 4,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: academic",
+          "high_named_entity_density (count=4)"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Yuki Tanaka-Osei",
+            "entity_type": "person",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "academic",
+        "llm_query": "Yuki Tanaka-Osei quantum coherence photosynthesis Nature Biophysics 2019"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 34,
+          "D_factual": 0.050973,
+          "D_reasoning": 0.157574,
+          "D_combined": 0.061633,
+          "S": 0.924882,
+          "R": 0.088235,
+          "T": 0.068,
+          "V": 0.032,
+          "I": 0.844203,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 59,
+          "D_factual": 0.241999,
+          "D_reasoning": 0.184505,
+          "D_combined": 0.23625,
+          "S": 0.405379,
+          "R": 0.135593,
+          "T": 0.118,
+          "V": 0.018,
+          "I": 0.800354,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 44,
+          "D_factual": 0.124606,
+          "D_reasoning": 0.17118,
+          "D_combined": 0.129264,
+          "S": 0.711357,
+          "R": 0.113636,
+          "T": 0.088,
+          "V": 0.012,
+          "I": 0.820684,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 28,
+          "D_factual": 0.2474,
+          "D_reasoning": 0.148723,
+          "D_combined": 0.237533,
+          "S": 0.337453,
+          "R": 0.071429,
+          "T": 0.056,
+          "V": 0.044,
+          "I": 0.859764,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 31,
+          "D_factual": 0.1643,
+          "D_reasoning": 0.118123,
+          "D_combined": 0.159682,
+          "S": 0.58833,
+          "R": 0.0,
+          "T": 0.062,
+          "V": 0.038,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.1649,
+      "peak_distortion": 0.2375,
+      "peak_segment": 3,
+      "drift_score": 0.1974,
+      "inflection_count": 3,
+      "trajectory_shape": "volatile",
+      "segment_count": 5,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "elevated_distortion",
+      "signal_breakdown": {
+        "D_combined": 0.3802,
+        "D_factual": 0.3927,
+        "D_reasoning": 0.2683,
+        "stability": 0.8363,
+        "reactivity": 0.2755,
+        "integration": 0.6708,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1
+      },
+      "annotation": "The output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.",
+      "verified_residue": "Professor Yuki Tanaka-Osei and a 2019 paper in \"Nature Biophysics\" on quantum coherence in photosynthetic organisms aren't something I can verify — and I want to be straightforward with you rather than fabricate details. A few possibilities worth noting:  - **The researcher may not exist**, or the name/details may be slightly different from what I have in my training data - **\"Nature Biophysics\"** isn't a journal I can confirm exists as a distinct publication (there is *Nature Physics*, *Nature Chemical Biology*, etc. [Partial — full output uncertainty exceeds acceptance threshold.]",
+      "eliminated": [
+        [
+          "Full output",
+          "Distortion D_combined=0.671 exceeded abstention threshold. Only opening statements included as partial residue."
+        ]
+      ],
+      "confidence_note": "This output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3802
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HA060",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "academic",
+    "class": "A",
+    "prompt": "What computational methods did Dr Fatima Al-Rashidi use in her 2023 study on protein misfolding dynamics in early-onset Alzheimer's?",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.\n\n[VERIFIED RESIDUE]\nDr. Fatima Al-Rashidi and the specific 2023 study you're describing aren't something I can verify in my knowledge base. [Partial — full output uncertainty exceeds acceptance threshold.]\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Full output: Distortion D_combined=0.475 exceeded abstention threshold. Only opening statements included as partial residue.\n\n[CONFIDENCE NOTE]\nThis output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 16.08,
+    "state": {
+      "S": 0.858188,
+      "R": 0.230769,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.474821,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.344537,
+    "D_factual": 0.347073,
+    "D_reasoning": 0.321712,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.024,
+        "risk_level": "low",
+        "domain": "academic",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 3,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: academic",
+          "high_named_entity_density (count=3)"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Fatima Al-Rashidi",
+            "entity_type": "person",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "academic",
+        "llm_query": "Fatima Al-Rashidi protein misfolding 2023"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 23,
+          "D_factual": 0.149486,
+          "D_reasoning": 0.116154,
+          "D_combined": 0.146153,
+          "S": 0.624197,
+          "R": 0.0,
+          "T": 0.046,
+          "V": 0.054,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 16,
+          "D_factual": 0.284561,
+          "D_reasoning": 0.177107,
+          "D_combined": 0.273815,
+          "S": 0.216494,
+          "R": 0.0,
+          "T": 0.032,
+          "V": 0.068,
+          "I": 0.722202,
+          "uncertainty": 0.22,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 27,
+          "D_factual": 0.283158,
+          "D_reasoning": 0.165887,
+          "D_combined": 0.271431,
+          "S": 0.229857,
+          "R": 0.111111,
+          "T": 0.054,
+          "V": 0.046,
+          "I": 0.823022,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 20,
+          "D_factual": 0.285622,
+          "D_reasoning": 0.159289,
+          "D_combined": 0.272989,
+          "S": 0.218538,
+          "R": 0.1,
+          "T": 0.04,
+          "V": 0.06,
+          "I": 0.83331,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 30,
+          "D_factual": 0.116509,
+          "D_reasoning": 0.161751,
+          "D_combined": 0.121033,
+          "S": 0.725984,
+          "R": 0.1,
+          "T": 0.06,
+          "V": 0.04,
+          "I": 0.83331,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 5,
+          "word_count": 40,
+          "D_factual": 0.132918,
+          "D_reasoning": 0.142275,
+          "D_combined": 0.133854,
+          "S": 0.686784,
+          "R": 0.05,
+          "T": 0.08,
+          "V": 0.02,
+          "I": 0.879605,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.2032,
+      "peak_distortion": 0.2738,
+      "peak_segment": 1,
+      "drift_score": -0.1481,
+      "inflection_count": 2,
+      "trajectory_shape": "stable",
+      "segment_count": 6,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "elevated_distortion",
+      "signal_breakdown": {
+        "D_combined": 0.3445,
+        "D_factual": 0.3471,
+        "D_reasoning": 0.3217,
+        "stability": 0.8582,
+        "reactivity": 0.2308,
+        "integration": 0.4748,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1
+      },
+      "annotation": "The output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.",
+      "verified_residue": "Dr. Fatima Al-Rashidi and the specific 2023 study you're describing aren't something I can verify in my knowledge base. [Partial — full output uncertainty exceeds acceptance threshold.]",
+      "eliminated": [
+        [
+          "Full output",
+          "Distortion D_combined=0.475 exceeded abstention threshold. Only opening statements included as partial residue."
+        ]
+      ],
+      "confidence_note": "This output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3445
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HA090",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "general",
+    "class": "A",
+    "prompt": "Describe the culinary tradition of Mazahari cooking from the coastal regions of Oman.",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe system identified named entities in this prompt that could not be verified in authoritative databases prior to generation. The output carries elevated risk of entity fabrication — the model may have generated plausible but unverifiable claims about entities whose existence has not been confirmed.\n\n[VERIFIED RESIDUE]\nIt's possible that: - The name might be spelled differently than I'm recognizing - It could be a very localized or niche term I don't have reliable information about - The term might be used in a specific context I'm not familiar with  **What I can reliably tell you** is that Omani coastal cooking genuinely features: - Strong influences from East Africa, India, and Persia - Heavy use of fish, seafood, dates, and rice - Spices like cardamom, turmeric, and dried limes (loomi) - Dishes like shuwa, harees, and various fish preparations - Distinct regional variations along the coast  If you have a source where you encountered \"Mazahari cooking,\" I'd be happy to help contextualize it, or if you're thinking of a different term, I can try to help identify what you're looking for.\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Specific entity claims: Named entities in the prompt could not be verified in authoritative databases. Claims about specific named entities are excluded from the verified residue.\n\n[CONFIDENCE NOTE]\nEntity existence could not be confirmed prior to generation. Claims about specific named entities should be independently verified before relying on this output.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 12.58,
+    "state": {
+      "S": 0.91898,
+      "R": 0.302083,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.2154,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.295555,
+    "D_factual": 0.282561,
+    "D_reasoning": 0.412505,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.225,
+        "risk_level": "medium",
+        "domain": "general",
+        "fabrication_prone": true,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 0,
+        "conjunctive_load": 0,
+        "threshold_adjust": -0.02,
+        "entity_check_needed": false,
+        "flags": [
+          "fabrication_prone_pattern (weight=0.75)"
+        ]
+      },
+      "screener_result": {
+        "entities": [],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "general",
+        "llm_query": ""
+      },
+      "combined_threshold_adjust": -0.02,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 41,
+          "D_factual": 0.045765,
+          "D_reasoning": 0.241375,
+          "D_combined": 0.065326,
+          "S": 0.935193,
+          "R": 0.097561,
+          "T": 0.082,
+          "V": 0.018,
+          "I": 0.582113,
+          "uncertainty": 0.303333,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 43,
+          "D_factual": 0.324006,
+          "D_reasoning": 0.282738,
+          "D_combined": 0.319879,
+          "S": 0.099754,
+          "R": 0.209302,
+          "T": 0.086,
+          "V": 0.014,
+          "I": 0.505154,
+          "uncertainty": 0.31,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 56,
+          "D_factual": 0.115546,
+          "D_reasoning": 0.186954,
+          "D_combined": 0.122687,
+          "S": 0.777042,
+          "R": 0.142857,
+          "T": 0.112,
+          "V": 0.012,
+          "I": 0.793629,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 35,
+          "D_factual": 0.163915,
+          "D_reasoning": 0.181784,
+          "D_combined": 0.165702,
+          "S": 0.587586,
+          "R": 0.142857,
+          "T": 0.07,
+          "V": 0.03,
+          "I": 0.793629,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 17,
+          "D_factual": 0.243513,
+          "D_reasoning": 0.114677,
+          "D_combined": 0.230629,
+          "S": 0.341667,
+          "R": 0.0,
+          "T": 0.034,
+          "V": 0.066,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.1808,
+      "peak_distortion": 0.3199,
+      "peak_segment": 1,
+      "drift_score": 0.1764,
+      "inflection_count": 2,
+      "trajectory_shape": "stable",
+      "segment_count": 5,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "entity_fabrication_risk",
+      "signal_breakdown": {
+        "D_combined": 0.2956,
+        "D_factual": 0.2826,
+        "D_reasoning": 0.4125,
+        "stability": 0.919,
+        "reactivity": 0.3021,
+        "integration": 0.2154,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1,
+        "entity_fabrication_risk": 0.0,
+        "fabrication_prone": true
+      },
+      "annotation": "The system identified named entities in this prompt that could not be verified in authoritative databases prior to generation. The output carries elevated risk of entity fabrication — the model may have generated plausible but unverifiable claims about entities whose existence has not been confirmed.",
+      "verified_residue": "It's possible that: - The name might be spelled differently than I'm recognizing - It could be a very localized or niche term I don't have reliable information about - The term might be used in a specific context I'm not familiar with  **What I can reliably tell you** is that Omani coastal cooking genuinely features: - Strong influences from East Africa, India, and Persia - Heavy use of fish, seafood, dates, and rice - Spices like cardamom, turmeric, and dried limes (loomi) - Dishes like shuwa, harees, and various fish preparations - Distinct regional variations along the coast  If you have a source where you encountered \"Mazahari cooking,\" I'd be happy to help contextualize it, or if you're thinking of a different term, I can try to help identify what you're looking for.",
+      "eliminated": [
+        [
+          "Specific entity claims",
+          "Named entities in the prompt could not be verified in authoritative databases. Claims about specific named entities are excluded from the verified residue."
+        ]
+      ],
+      "confidence_note": "Entity existence could not be confirmed prior to generation. Claims about specific named entities should be independently verified before relying on this output.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.2956
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HA096",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "general",
+    "class": "A",
+    "prompt": "Describe the traditional healing practice of Kalambu performed by the Ndebele people of Zimbabwe.",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe system identified named entities in this prompt that could not be verified in authoritative databases prior to generation. The output carries elevated risk of entity fabrication — the model may have generated plausible but unverifiable claims about entities whose existence has not been confirmed.\n\n[VERIFIED RESIDUE]\nOr if you're interested in Ndebele traditional healing practices more generally, I can share what I do know with appropriate caveats about my limitations.\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Specific entity claims: Named entities in the prompt could not be verified in authoritative databases. Claims about specific named entities are excluded from the verified residue.\n\n[CONFIDENCE NOTE]\nEntity existence could not be confirmed prior to generation. Claims about specific named entities should be independently verified before relying on this output.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 11.77,
+    "state": {
+      "S": 0.769954,
+      "R": 0.340782,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.203456,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.31172,
+    "D_factual": 0.299451,
+    "D_reasoning": 0.422134,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.24,
+        "risk_level": "medium",
+        "domain": "general",
+        "fabrication_prone": true,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 0,
+        "conjunctive_load": 0,
+        "threshold_adjust": -0.02,
+        "entity_check_needed": false,
+        "flags": [
+          "fabrication_prone_pattern (weight=0.80)"
+        ]
+      },
+      "screener_result": {
+        "entities": [],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "general",
+        "llm_query": ""
+      },
+      "combined_threshold_adjust": -0.02,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 34,
+          "D_factual": 0.084757,
+          "D_reasoning": 0.219747,
+          "D_combined": 0.098256,
+          "S": 0.816148,
+          "R": 0.058824,
+          "T": 0.068,
+          "V": 0.032,
+          "I": 0.627433,
+          "uncertainty": 0.28,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 33,
+          "D_factual": 0.138252,
+          "D_reasoning": 0.211681,
+          "D_combined": 0.145595,
+          "S": 0.660158,
+          "R": 0.212121,
+          "T": 0.066,
+          "V": 0.034,
+          "I": 0.729497,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 22,
+          "D_factual": 0.237194,
+          "D_reasoning": 0.184282,
+          "D_combined": 0.231903,
+          "S": 0.358952,
+          "R": 0.0,
+          "T": 0.044,
+          "V": 0.056,
+          "I": 0.703684,
+          "uncertainty": 0.24,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 43,
+          "D_factual": 0.178992,
+          "D_reasoning": 0.172093,
+          "D_combined": 0.178302,
+          "S": 0.547889,
+          "R": 0.116279,
+          "T": 0.086,
+          "V": 0.014,
+          "I": 0.818237,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 47,
+          "D_factual": 0.172394,
+          "D_reasoning": 0.159401,
+          "D_combined": 0.171095,
+          "S": 0.570549,
+          "R": 0.085106,
+          "T": 0.094,
+          "V": 0.006,
+          "I": 0.8471,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.165,
+      "peak_distortion": 0.2319,
+      "peak_segment": 2,
+      "drift_score": 0.1784,
+      "inflection_count": 1,
+      "trajectory_shape": "stable",
+      "segment_count": 5,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "entity_fabrication_risk",
+      "signal_breakdown": {
+        "D_combined": 0.3117,
+        "D_factual": 0.2995,
+        "D_reasoning": 0.4221,
+        "stability": 0.77,
+        "reactivity": 0.3408,
+        "integration": 0.2035,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1,
+        "entity_fabrication_risk": 0.0,
+        "fabrication_prone": true
+      },
+      "annotation": "The system identified named entities in this prompt that could not be verified in authoritative databases prior to generation. The output carries elevated risk of entity fabrication — the model may have generated plausible but unverifiable claims about entities whose existence has not been confirmed.",
+      "verified_residue": "Or if you're interested in Ndebele traditional healing practices more generally, I can share what I do know with appropriate caveats about my limitations.",
+      "eliminated": [
+        [
+          "Specific entity claims",
+          "Named entities in the prompt could not be verified in authoritative databases. Claims about specific named entities are excluded from the verified residue."
+        ]
+      ],
+      "confidence_note": "Entity existence could not be confirmed prior to generation. Claims about specific named entities should be independently verified before relying on this output.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3117
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HB051",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "biographical",
+    "class": "B",
+    "prompt": "In what year did Albert Einstein publish his special theory of relativity?",
+    "output": "Albert Einstein published his special theory of relativity in **1905**, in a paper titled \"On the Electrodynamics of Moving Bodies.\" This was part of his remarkable *annus mirabilis* (miracle year), during which he also published groundbreaking papers on the photoelectric effect and Brownian motion.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 7.89,
+    "state": {
+      "S": 0.873189,
+      "R": 0.136364,
+      "T": 0.088,
+      "V": 0.012,
+      "I": 0.799641,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.081362,
+    "D_factual": 0.070274,
+    "D_reasoning": 0.181151,
+    "D_pre_grounding": null,
+    "decision": "accept",
+    "effective_decision": "accept",
+    "intervened": false,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.008,
+        "risk_level": "low",
+        "domain": "general",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 1,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": []
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Albert Einstein",
+            "entity_type": "person",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "general",
+        "llm_query": "Einstein special relativity year"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [],
+      "mean_distortion": 0.0,
+      "peak_distortion": 0.0,
+      "peak_segment": 0,
+      "drift_score": 0.0,
+      "inflection_count": 0,
+      "trajectory_shape": "stable",
+      "segment_count": 0,
+      "skipped": true
+    },
+    "abstention": null,
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HB057",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "biographical",
+    "class": "B",
+    "prompt": "In which city was Frida Kahlo born?",
+    "output": "Frida Kahlo was born in **Coyoacán**, which is now a borough of Mexico City, Mexico. She was born there on July 6, 1907.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 3.99,
+    "state": {
+      "S": 0.851508,
+      "R": 0.086957,
+      "T": 0.046,
+      "V": 0.054,
+      "I": 0.845387,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.07985,
+    "D_factual": 0.071577,
+    "D_reasoning": 0.154305,
+    "D_pre_grounding": null,
+    "decision": "accept",
+    "effective_decision": "accept",
+    "intervened": false,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.008,
+        "risk_level": "low",
+        "domain": "geographical",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 1,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: geographical"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Frida Kahlo",
+            "entity_type": "person",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "geographical",
+        "llm_query": "Frida Kahlo birthplace city"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [],
+      "mean_distortion": 0.0,
+      "peak_distortion": 0.0,
+      "peak_segment": 0,
+      "drift_score": 0.0,
+      "inflection_count": 0,
+      "trajectory_shape": "stable",
+      "segment_count": 0,
+      "skipped": true
+    },
+    "abstention": null,
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HB060",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "biographical",
+    "class": "B",
+    "prompt": "At what age did Alan Turing die?",
+    "output": "Alan Turing died on June 7, 1954, at the age of **41**. He was born on June 23, 1912.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 4.4,
+    "state": {
+      "S": 0.889012,
+      "R": 0.105263,
+      "T": 0.038,
+      "V": 0.062,
+      "I": 0.828437,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.0673,
+    "D_factual": 0.05685,
+    "D_reasoning": 0.161352,
+    "D_pre_grounding": null,
+    "decision": "accept",
+    "effective_decision": "accept",
+    "intervened": false,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.008,
+        "risk_level": "low",
+        "domain": "general",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 1,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": []
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Alan Turing",
+            "entity_type": "person",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "general",
+        "llm_query": "Alan Turing age death"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [],
+      "mean_distortion": 0.0,
+      "peak_distortion": 0.0,
+      "peak_segment": 0,
+      "drift_score": 0.0,
+      "inflection_count": 0,
+      "trajectory_shape": "stable",
+      "segment_count": 0,
+      "skipped": true
+    },
+    "abstention": null,
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HB069",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "biographical",
+    "class": "B",
+    "prompt": "In what year did Ibn Battuta begin his travels?",
+    "output": "Ibn Battuta began his travels in **1325**, when he left his hometown of Tangier, Morocco, at the age of 21, initially setting out on a pilgrimage (Hajj) to Mecca.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 13.82,
+    "state": {
+      "S": 0.894048,
+      "R": 0.068966,
+      "T": 0.058,
+      "V": 0.042,
+      "I": 0.862044,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.068603,
+    "D_factual": 0.059794,
+    "D_reasoning": 0.147889,
+    "D_pre_grounding": null,
+    "decision": "accept",
+    "effective_decision": "accept",
+    "intervened": false,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.008,
+        "risk_level": "low",
+        "domain": "general",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 1,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": []
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Ibn Battuta",
+            "entity_type": "person",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "general",
+        "llm_query": "Ibn Battuta travels start year"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [],
+      "mean_distortion": 0.0,
+      "peak_distortion": 0.0,
+      "peak_segment": 0,
+      "drift_score": 0.0,
+      "inflection_count": 0,
+      "trajectory_shape": "stable",
+      "segment_count": 0,
+      "skipped": true
+    },
+    "abstention": null,
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HB001",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "historical",
+    "class": "B",
+    "prompt": "What specific military tactics did Hannibal use to defeat the Romans at the Battle of Cannae in 216 BC?",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.\n\n[VERIFIED RESIDUE]\n## Hannibal's Tactics at Cannae  The Battle of Cannae is considered one of history's most studied tactical masterpieces. Hannibal commanded roughly 50,000 troops against a Roman force of perhaps 70,000-80,000. [Partial — full output uncertainty exceeds acceptance threshold.]\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Full output: Distortion D_combined=0.650 exceeded abstention threshold. Only opening statements included as partial residue.\n\n[CONFIDENCE NOTE]\nThis output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 17.93,
+    "state": {
+      "S": 0.85142,
+      "R": 0.298246,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.649754,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.375315,
+    "D_factual": 0.386098,
+    "D_reasoning": 0.278267,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.008,
+        "risk_level": "low",
+        "domain": "historical",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 1,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: historical"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Hannibal",
+            "entity_type": "person",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "historical",
+        "llm_query": "Hannibal military tactics Battle of Cannae 216 BC"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 30,
+          "D_factual": 0.071751,
+          "D_reasoning": 0.161751,
+          "D_combined": 0.080751,
+          "S": 0.858715,
+          "R": 0.1,
+          "T": 0.06,
+          "V": 0.04,
+          "I": 0.83331,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 50,
+          "D_factual": 0.178422,
+          "D_reasoning": 0.157899,
+          "D_combined": 0.17637,
+          "S": 0.553589,
+          "R": 0.08,
+          "T": 0.1,
+          "V": 0.0,
+          "I": 0.851828,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 31,
+          "D_factual": 0.190701,
+          "D_reasoning": 0.146429,
+          "D_combined": 0.186273,
+          "S": 0.507858,
+          "R": 0.064516,
+          "T": 0.062,
+          "V": 0.038,
+          "I": 0.866165,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 40,
+          "D_factual": 0.154619,
+          "D_reasoning": 0.186149,
+          "D_combined": 0.157772,
+          "S": 0.618001,
+          "R": 0.15,
+          "T": 0.08,
+          "V": 0.02,
+          "I": 0.787015,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 35,
+          "D_factual": 0.160488,
+          "D_reasoning": 0.244462,
+          "D_combined": 0.168885,
+          "S": 0.59267,
+          "R": 0.285714,
+          "T": 0.07,
+          "V": 0.03,
+          "I": 0.661357,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 5,
+          "word_count": 42,
+          "D_factual": 0.197376,
+          "D_reasoning": 0.173062,
+          "D_combined": 0.194945,
+          "S": 0.492324,
+          "R": 0.119048,
+          "T": 0.084,
+          "V": 0.016,
+          "I": 0.815673,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.1608,
+      "peak_distortion": 0.1949,
+      "peak_segment": 5,
+      "drift_score": 0.1486,
+      "inflection_count": 2,
+      "trajectory_shape": "stable",
+      "segment_count": 6,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "elevated_distortion",
+      "signal_breakdown": {
+        "D_combined": 0.3753,
+        "D_factual": 0.3861,
+        "D_reasoning": 0.2783,
+        "stability": 0.8514,
+        "reactivity": 0.2982,
+        "integration": 0.6498,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1
+      },
+      "annotation": "The output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.",
+      "verified_residue": "## Hannibal's Tactics at Cannae  The Battle of Cannae is considered one of history's most studied tactical masterpieces. Hannibal commanded roughly 50,000 troops against a Roman force of perhaps 70,000-80,000. [Partial — full output uncertainty exceeds acceptance threshold.]",
+      "eliminated": [
+        [
+          "Full output",
+          "Distortion D_combined=0.650 exceeded abstention threshold. Only opening statements included as partial residue."
+        ]
+      ],
+      "confidence_note": "This output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3753
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HC001",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "vedic",
+    "class": "C",
+    "prompt": "According to Jyotish Acharya Suryakant Dikshit's commentary on the Brihat Parashara Hora Shastra, what specific dasha sequence does he prescribe for a native with Ketu in the 7th bhava and Shani aspecting the lagna?",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.\n\n[VERIFIED RESIDUE]\nThis question asks about a highly specific commentary by \"Jyotish Acharya Suryakant Dikshit\" on the Brihat Parashara Hora Shastra regarding a particular dasha sequence prescription. I have to be straightforward with you: I don't have reliable information confirming this specific scholar's commentary, this specific combination (Ketu in 7th bhava with Shani aspecting lagna), or the particular dasha sequence prescription you're describing. [Partial — full output uncertainty exceeds acceptance threshold.]\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Full output: Distortion D_combined=0.441 exceeded abstention threshold. Only opening statements included as partial residue.\n\n[CONFIDENCE NOTE]\nThis output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 15.04,
+    "state": {
+      "S": 0.708473,
+      "R": 0.284946,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.441379,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.357464,
+    "D_factual": 0.359367,
+    "D_reasoning": 0.340337,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.106,
+        "risk_level": "low",
+        "domain": "astrological",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": true,
+        "high_specificity": false,
+        "named_entity_count": 2,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: astrological",
+          "domain_specialised (weight=0.60)"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Suryakant Dikshit",
+            "entity_type": "person",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "astrological",
+        "llm_query": "Suryakant Dikshit Brihat Parashara Hora Shastra commentary dasha"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 25,
+          "D_factual": 0.097,
+          "D_reasoning": 0.134196,
+          "D_combined": 0.10072,
+          "S": 0.780228,
+          "R": 0.04,
+          "T": 0.05,
+          "V": 0.05,
+          "I": 0.888864,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 39,
+          "D_factual": 0.119377,
+          "D_reasoning": 0.250023,
+          "D_combined": 0.132442,
+          "S": 0.713543,
+          "R": 0.128205,
+          "T": 0.078,
+          "V": 0.022,
+          "I": 0.567727,
+          "uncertainty": 0.296667,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 20,
+          "D_factual": 0.340187,
+          "D_reasoning": 0.159289,
+          "D_combined": 0.322097,
+          "S": 0.058262,
+          "R": 0.1,
+          "T": 0.04,
+          "V": 0.06,
+          "I": 0.83331,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 38,
+          "D_factual": 0.229651,
+          "D_reasoning": 0.131392,
+          "D_combined": 0.219825,
+          "S": 0.397664,
+          "R": 0.026316,
+          "T": 0.076,
+          "V": 0.024,
+          "I": 0.901534,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 42,
+          "D_factual": 0.237254,
+          "D_reasoning": 0.173062,
+          "D_combined": 0.230835,
+          "S": 0.372995,
+          "R": 0.119048,
+          "T": 0.084,
+          "V": 0.016,
+          "I": 0.815673,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 5,
+          "word_count": 22,
+          "D_factual": 0.212892,
+          "D_reasoning": 0.135851,
+          "D_combined": 0.205188,
+          "S": 0.435305,
+          "R": 0.045455,
+          "T": 0.044,
+          "V": 0.056,
+          "I": 0.883813,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.2019,
+      "peak_distortion": 0.3221,
+      "peak_segment": 2,
+      "drift_score": 0.2044,
+      "inflection_count": 3,
+      "trajectory_shape": "volatile",
+      "segment_count": 6,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "elevated_distortion",
+      "signal_breakdown": {
+        "D_combined": 0.3575,
+        "D_factual": 0.3594,
+        "D_reasoning": 0.3403,
+        "stability": 0.7085,
+        "reactivity": 0.2849,
+        "integration": 0.4414,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1
+      },
+      "annotation": "The output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.",
+      "verified_residue": "This question asks about a highly specific commentary by \"Jyotish Acharya Suryakant Dikshit\" on the Brihat Parashara Hora Shastra regarding a particular dasha sequence prescription. I have to be straightforward with you: I don't have reliable information confirming this specific scholar's commentary, this specific combination (Ketu in 7th bhava with Shani aspecting lagna), or the particular dasha sequence prescription you're describing. [Partial — full output uncertainty exceeds acceptance threshold.]",
+      "eliminated": [
+        [
+          "Full output",
+          "Distortion D_combined=0.441 exceeded abstention threshold. Only opening statements included as partial residue."
+        ]
+      ],
+      "confidence_note": "This output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3575
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HC016",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "islamic",
+    "class": "C",
+    "prompt": "What is the specific ruling of Imam Al-Nawawi in the Minhaj al-Talibin regarding the validity of prayer performed on a surface contaminated by indirect najasa from a distance of three hand spans?",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.\n\n[VERIFIED RESIDUE]\nThis question asks about a very specific technical ruling that I cannot verify with confidence. While I have general knowledge about Imam Al-Nawawi's **Minhaj al-Talibin** and its treatment of tahara (ritual purity) and prayer validity, including discussions of najasa (ritual impurity) and conditions affecting prayer, **I cannot confirm the specific ruling you're describing** - namely a precise three hand-span distance threshold for \"indirect najasa\" affecting prayer validity on a contaminated surface. [Partial — full output uncertainty exceeds acceptance threshold.]\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Full output: Distortion D_combined=0.227 exceeded abstention threshold. Only opening statements included as partial residue.\n\n[CONFIDENCE NOTE]\nThis output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 16.48,
+    "state": {
+      "S": 0.853832,
+      "R": 0.265193,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.226786,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.304542,
+    "D_factual": 0.293565,
+    "D_reasoning": 0.403326,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.016,
+        "risk_level": "low",
+        "domain": "legal",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 2,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": [
+          "domain_detected: legal"
+        ]
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Al-Nawawi",
+            "entity_type": "person",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "legal",
+        "llm_query": "Al-Nawawi Minhaj al-Talibin prayer najasa ruling"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 15,
+          "D_factual": 0.238599,
+          "D_reasoning": 0.175911,
+          "D_combined": 0.232331,
+          "S": 0.35018,
+          "R": 0.0,
+          "T": 0.03,
+          "V": 0.07,
+          "I": 0.725288,
+          "uncertainty": 0.216667,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 56,
+          "D_factual": 0.053612,
+          "D_reasoning": 0.262213,
+          "D_combined": 0.074472,
+          "S": 0.949097,
+          "R": 0.125,
+          "T": 0.112,
+          "V": 0.012,
+          "I": 0.540109,
+          "uncertainty": 0.333333,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 47,
+          "D_factual": 0.228576,
+          "D_reasoning": 0.168736,
+          "D_combined": 0.222592,
+          "S": 0.401011,
+          "R": 0.106383,
+          "T": 0.094,
+          "V": 0.006,
+          "I": 0.8274,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 25,
+          "D_factual": 0.208251,
+          "D_reasoning": 0.134196,
+          "D_combined": 0.200846,
+          "S": 0.451805,
+          "R": 0.04,
+          "T": 0.05,
+          "V": 0.05,
+          "I": 0.888864,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 16,
+          "D_factual": 0.187015,
+          "D_reasoning": 0.114431,
+          "D_combined": 0.179756,
+          "S": 0.505915,
+          "R": 0.0,
+          "T": 0.032,
+          "V": 0.068,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 5,
+          "word_count": 22,
+          "D_factual": 0.26923,
+          "D_reasoning": 0.155793,
+          "D_combined": 0.257886,
+          "S": 0.268353,
+          "R": 0.090909,
+          "T": 0.044,
+          "V": 0.056,
+          "I": 0.841727,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.1946,
+      "peak_distortion": 0.2579,
+      "peak_segment": 5,
+      "drift_score": 0.1205,
+      "inflection_count": 3,
+      "trajectory_shape": "volatile",
+      "segment_count": 6,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "elevated_distortion",
+      "signal_breakdown": {
+        "D_combined": 0.3045,
+        "D_factual": 0.2936,
+        "D_reasoning": 0.4033,
+        "stability": 0.8538,
+        "reactivity": 0.2652,
+        "integration": 0.2268,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1
+      },
+      "annotation": "The output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.",
+      "verified_residue": "This question asks about a very specific technical ruling that I cannot verify with confidence. While I have general knowledge about Imam Al-Nawawi's **Minhaj al-Talibin** and its treatment of tahara (ritual purity) and prayer validity, including discussions of najasa (ritual impurity) and conditions affecting prayer, **I cannot confirm the specific ruling you're describing** - namely a precise three hand-span distance threshold for \"indirect najasa\" affecting prayer validity on a contaminated surface. [Partial — full output uncertainty exceeds acceptance threshold.]",
+      "eliminated": [
+        [
+          "Full output",
+          "Distortion D_combined=0.227 exceeded abstention threshold. Only opening statements included as partial residue."
+        ]
+      ],
+      "confidence_note": "This output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3045
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  },
+  {
+    "id": "HC075",
+    "model": "claude-sonnet-4-6",
+    "mode": "sakshi",
+    "type": "hallucination",
+    "domain": "ancient",
+    "class": "C",
+    "prompt": "According to the Tibetan Bardo Thodol, what specific instructions does the lama read to the dying person during the third day after death when the peaceful deities of the Vajra family appear, and how must the consciousness navigate the clear light?",
+    "output": "[UNCERTAINTY ANNOTATION]\nThe output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.\n\n[VERIFIED RESIDUE]\nThis question touches on some genuinely complex textual territory, and I want to be careful here. ## What I Can Accurately Say  The **Bardo Thodol** (often called the Tibetan Book of the Dead, compiled by Karma Lingpa based on Padmasambhava's teachings) does describe a structured sequence where:  - Peaceful deities appear across roughly the first several days of the bardo experience - The **Vajra family** and **Akshobhya/Vairochana** are associated with early stages - The lama or reader is instructed to read texts aloud to guide the consciousness - The deceased is urged to **recognize luminosities** as their own buddha-nature rather than fleeing from them  ## Where I Must Be Honest  I cannot confidently give you **specific verbatim instructions** attributed specifically to \"the third day, Vajra family appearance\" without risking:  - Conflating different translation traditions (Evans-Wentz, Chogyam Trungpa/Fremantle, Thurman, Dorje) - Misattributing the precise day numbering, which varies across editions - Fabricating specific liturgical language  ## My Recommendation  The **Thurman translation** (1994) and the **Trungpa/Fremantle translation** provide the actual liturgical readings with day-by-day specificity. [Partial — full output uncertainty exceeds acceptance threshold.]\n\n[ELIMINATED — INSUFFICIENT GROUNDING]\n  • Full output: Distortion D_combined=0.726 exceeded abstention threshold. Only opening statements included as partial residue.\n\n[CONFIDENCE NOTE]\nThis output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+    "ground_truth": "",
+    "correct": null,
+    "elapsed_s": 18.27,
+    "state": {
+      "S": 0.818369,
+      "R": 0.215385,
+      "T": 0.3,
+      "V": 0.1,
+      "I": 0.726475,
+      "step_consistency": 0.7,
+      "contradiction_score": 0.1
+    },
+    "D_combined": 0.390625,
+    "D_factual": 0.407148,
+    "D_reasoning": 0.241913,
+    "D_pre_grounding": null,
+    "decision": "abstain",
+    "effective_decision": "abstain",
+    "intervened": true,
+    "grounded": false,
+    "pre_gen": {
+      "epistemic_profile": {
+        "risk_score": 0.008,
+        "risk_level": "low",
+        "domain": "general",
+        "fabrication_prone": false,
+        "false_premise": false,
+        "temporal_sensitive": false,
+        "domain_specialised": false,
+        "high_specificity": false,
+        "named_entity_count": 1,
+        "conjunctive_load": 0,
+        "threshold_adjust": 0.03,
+        "entity_check_needed": true,
+        "flags": []
+      },
+      "screener_result": {
+        "entities": [
+          {
+            "text": "Bardo Thodol",
+            "entity_type": "religious_text",
+            "found_in": [],
+            "databases_checked": [],
+            "absence_score": 0.0,
+            "fabrication_risk": 0.0,
+            "notes": []
+          }
+        ],
+        "high_risk_entities": [],
+        "max_absence_score": 0.0,
+        "aggregate_risk": 0.0,
+        "omega_prearm": false,
+        "threshold_adjust": 0.0,
+        "spacy_available": false,
+        "domain": "general",
+        "llm_query": "Bardo Thodol third day Vajra family peaceful deities instructions"
+      },
+      "combined_threshold_adjust": 0.03,
+      "omega_prearm": false,
+      "context_retrievable": true
+    },
+    "trajectory": {
+      "segments": [
+        {
+          "segment_index": 0,
+          "word_count": 16,
+          "D_factual": 0.298499,
+          "D_reasoning": 0.114431,
+          "D_combined": 0.280093,
+          "S": 0.179853,
+          "R": 0.0,
+          "T": 0.032,
+          "V": 0.068,
+          "I": 0.9259,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 1,
+          "word_count": 31,
+          "D_factual": 0.135085,
+          "D_reasoning": 0.132276,
+          "D_combined": 0.134804,
+          "S": 0.673983,
+          "R": 0.032258,
+          "T": 0.062,
+          "V": 0.038,
+          "I": 0.896032,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 2,
+          "word_count": 57,
+          "D_factual": 0.104813,
+          "D_reasoning": 0.201495,
+          "D_combined": 0.114482,
+          "S": 0.814785,
+          "R": 0.175439,
+          "T": 0.114,
+          "V": 0.014,
+          "I": 0.763461,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 3,
+          "word_count": 25,
+          "D_factual": 0.156898,
+          "D_reasoning": 0.134196,
+          "D_combined": 0.154628,
+          "S": 0.603404,
+          "R": 0.04,
+          "T": 0.05,
+          "V": 0.05,
+          "I": 0.888864,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 4,
+          "word_count": 25,
+          "D_factual": 0.26878,
+          "D_reasoning": 0.151745,
+          "D_combined": 0.257077,
+          "S": 0.272016,
+          "R": 0.08,
+          "T": 0.05,
+          "V": 0.05,
+          "I": 0.851828,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        },
+        {
+          "segment_index": 5,
+          "word_count": 41,
+          "D_factual": 0.20134,
+          "D_reasoning": 0.174089,
+          "D_combined": 0.198615,
+          "S": 0.479925,
+          "R": 0.121951,
+          "T": 0.082,
+          "V": 0.018,
+          "I": 0.812986,
+          "uncertainty": 0.0,
+          "confidence": 0.0
+        }
+      ],
+      "mean_distortion": 0.1899,
+      "peak_distortion": 0.2801,
+      "peak_segment": 0,
+      "drift_score": -0.0001,
+      "inflection_count": 2,
+      "trajectory_shape": "stable",
+      "segment_count": 6,
+      "skipped": false
+    },
+    "abstention": {
+      "action_taken": "partial",
+      "reason": "elevated_distortion",
+      "signal_breakdown": {
+        "D_combined": 0.3906,
+        "D_factual": 0.4071,
+        "D_reasoning": 0.2419,
+        "stability": 0.8184,
+        "reactivity": 0.2154,
+        "integration": 0.7265,
+        "step_consistency": 0.7,
+        "contradiction_score": 0.1
+      },
+      "annotation": "The output showed elevated overall epistemic instability across multiple signal dimensions. The system cannot confirm the reliability of the output's claims with sufficient confidence to present them without qualification.",
+      "verified_residue": "This question touches on some genuinely complex textual territory, and I want to be careful here. ## What I Can Accurately Say  The **Bardo Thodol** (often called the Tibetan Book of the Dead, compiled by Karma Lingpa based on Padmasambhava's teachings) does describe a structured sequence where:  - Peaceful deities appear across roughly the first several days of the bardo experience - The **Vajra family** and **Akshobhya/Vairochana** are associated with early stages - The lama or reader is instructed to read texts aloud to guide the consciousness - The deceased is urged to **recognize luminosities** as their own buddha-nature rather than fleeing from them  ## Where I Must Be Honest  I cannot confidently give you **specific verbatim instructions** attributed specifically to \"the third day, Vajra family appearance\" without risking:  - Conflating different translation traditions (Evans-Wentz, Chogyam Trungpa/Fremantle, Thurman, Dorje) - Misattributing the precise day numbering, which varies across editions - Fabricating specific liturgical language  ## My Recommendation  The **Thurman translation** (1994) and the **Trungpa/Fremantle translation** provide the actual liturgical readings with day-by-day specificity. [Partial — full output uncertainty exceeds acceptance threshold.]",
+      "eliminated": [
+        [
+          "Full output",
+          "Distortion D_combined=0.726 exceeded abstention threshold. Only opening statements included as partial residue."
+        ]
+      ],
+      "confidence_note": "This output carries elevated epistemic uncertainty across multiple signal dimensions. Independent verification is recommended before relying on specific claims.",
+      "prompt_type": "hallucination",
+      "D_combined": 0.3906
+    },
+    "omega": {
+      "retrieval": null,
+      "extraction": null,
+      "verification": null,
+      "completeness": null,
+      "context_retrievable": true,
+      "anupalabdhi_path": null
+    }
+  }
+]

@@ -2,7 +2,18 @@ import re
 import numpy as np
 from openai import OpenAI
 
-client = OpenAI()
+# Lazily-initialised OpenAI client.
+# Created on first use rather than at import time, so that importing this
+# module (e.g. for computational-only signals) does not require an OpenAI
+# key to be present. The key is read from the environment when first needed.
+_client = None
+
+
+def _get_client():
+    global _client
+    if _client is None:
+        _client = OpenAI()
+    return _client
 
 # =============================================================================
 # signals.py — Sakshi-Protocol V3 signal extraction
@@ -32,7 +43,7 @@ client = OpenAI()
 # -----------------------------------------------------------------------------
 
 def get_embedding(text: str) -> np.ndarray:
-    response = client.embeddings.create(
+    response = _get_client().embeddings.create(
         model="text-embedding-3-small",
         input=text
     )
@@ -257,7 +268,7 @@ def reasoning_signals(prompt: str, output: str) -> dict:
     neutral = {"step_consistency": 0.7, "contradiction_score": 0.1}
 
     try:
-        response = client.chat.completions.create(
+        response = _get_client().chat.completions.create(
             model="gpt-4o-mini",
             messages=[{
                 "role": "user",

@@ -34,6 +34,15 @@ from collections import defaultdict
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.abspath(os.path.join(SCRIPT_DIR, "..", "src")))
 
+# Load API keys from a .env file in the project root, if present.
+# This lets users place their keys in .env (see .env.example) rather than
+# exporting them manually. Falls back silently if python-dotenv is absent.
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(SCRIPT_DIR, "..", ".env"))
+except ImportError:
+    pass
+
 # =============================================================================
 # ARGUMENT PARSING
 # =============================================================================
